@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ai-minds-website",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd '/Users/luisdorantes/Desktop/AI MINDS 5.27.26/ai-minds-website' && npm run dev"],
+      "port": 3000
+    }
+  ]
+}

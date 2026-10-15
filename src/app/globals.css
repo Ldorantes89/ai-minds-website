@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-jakarta: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-inter: "Inter", system-ui, sans-serif;
+}
+
+* {
+  border-color: rgba(10, 10, 20, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0a0a14;
+}
+
+/* Colorful selection */
+::selection {
+  background-color: rgba(124, 58, 237, 0.25);
+  color: #0a0a14;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4e0;
+  border-radius: 6px;
+  border: 3px solid #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8b8c8;
+}
+
+@layer base {
+  /* Global ambient background: bright canvas + soft brand-color blooms.
+     Keeps the same composition as the dark version, just inverted. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        ellipse 70% 50% at 18% 0%,
+        rgba(124, 58, 237, 0.12),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 45% at 85% 8%,
+        rgba(59, 130, 246, 0.10),
+        transparent 58%
+      ),
+      radial-gradient(
+        ellipse 80% 55% at 50% 100%,
+        rgba(99, 102, 241, 0.08),
+        transparent 60%
+      ),
+      linear-gradient(180deg, #ffffff 0%, #f7f5ff 45%, #ffffff 100%);
+  }
+  /* Star/noise layer kept very faint to add a touch of texture without
+     looking like a dirty canvas on the light background. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.18;
+    background-image:
+      radial-gradient(rgba(124, 58, 237, 0.45) 0.5px, transparent 0.6px),
+      radial-gradient(rgba(59, 130, 246, 0.35) 0.5px, transparent 0.6px);
+    background-size: 120px 120px, 200px 200px;
+    background-position: 0 0, 60px 80px;
+    mask-image: linear-gradient(to bottom, black, transparent 70%);
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 70%);
+  }
+}
+
+@layer components {
+  /* Display headings — bold, rounded, friendly, punchy */
+  .display-h1 {
+    font-family: var(--font-jakarta);
+    font-size: clamp(2.85rem, 6.4vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 800;
+  }
+  .display-h2 {
+    font-family: var(--font-jakarta);
+    font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+  .display-h3 {
+    font-family: var(--font-jakarta);
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+  .body-lg {
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+    line-height: 1.6;
+    color: #4b4b62;
+  }
+
+  /* Brand gradient text accent — same gradient stops, works on white */
+  .text-gradient-brand {
+    background: linear-gradient(120deg, #7c3aed 0%, #6366f1 45%, #3b82f6 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Glassy panel surface — frosted-dark dot pattern over white */
+  .glass {
+    background: rgba(10, 10, 20, 0.025);
+    border: 1px solid rgba(10, 10, 20, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+@layer utilities {
+  /* Per-agent color theming via CSS variables (set inline style --agent) */
+  .glow-agent {
+    box-shadow:
+      0 8px 30px -8px var(--agent-glow, rgba(124, 58, 237, 0.4)),
+      0 0 0 1px rgba(10, 10, 20, 0.04);
+  }
+}
+
+/* Agent avatar hover wiggle — gentle wave when an AgentCard is hovered. */
+@keyframes agent-wave {
+  0%, 100% { transform: rotate(0deg); }
+  20%      { transform: rotate(-7deg); }
+  50%      { transform: rotate(8deg); }
+  80%      { transform: rotate(-4deg); }
+}
+.group:hover .agent-avatar {
+  animation: agent-wave 1.1s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
