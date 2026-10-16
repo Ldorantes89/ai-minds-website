@@ -120,7 +120,7 @@ a:hover{color:var(--accent)}
     </div>
     <div style="padding:14px 18px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:var(--muted)">
       <span>{{ demo.footer }}</span>
-      <button onClick="{{ replay }}" style="border:1px solid var(--border);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:12px;padding:6px 12px;border-radius:999px" style-hover="background:var(--surface-2)">↻ replay</button>
+      <button onClick="{{ replay }}" style="border:1px solid var(--border);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:12px;padding:6px 12px;border-radius:999px" style-hover="background:var(--surface-2)">{{ t.replay }}</button>
     </div>
   </div>
   </div>
@@ -129,26 +129,26 @@ a:hover{color:var(--accent)}
 <section aria-labelledby="problem-h" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface)">
   <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,112px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,64px);align-items:center">
     <div style="display:flex;flex-direction:column;gap:36px">
-      <h2 id="problem-h" style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:500">The cost of a missed call</h2>
+      <h2 id="problem-h" style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:500">{{ t.problemLabel }}</h2>
       <div style="display:flex;flex-direction:column">
         <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--border);align-items:baseline">
           <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em">3–5</span>
-          <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">missed calls/day</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">average for a 5-person HVAC company</p></div>
+          <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">{{ t.stat1title }}</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">{{ t.stat1desc }}</p></div>
         </div>
         <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--border);align-items:baseline">
           <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em">67%</span>
-          <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">never call back</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">they call your competitor instead</p></div>
+          <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">{{ t.stat2title }}</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">{{ t.stat2desc }}</p></div>
         </div>
         <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);align-items:baseline">
           <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em;color:var(--accent)">$18K</span>
-          <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">lost every month</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">at $400/job avg × 5 missed calls/day</p></div>
+          <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">{{ t.stat3title }}</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">{{ t.stat3desc }}</p></div>
         </div>
       </div>
     </div>
     <div style="background:var(--bg);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);font-family:var(--mono);overflow:hidden">
       <div style="padding:18px 22px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px">
-        <span style="font-size:14px;font-weight:700">Tonight's missed calls</span>
-        <span style="font-size:12px;color:var(--muted)">after 6:00 PM</span>
+        <span style="font-size:14px;font-weight:700">{{ t.ledgerTitle }}</span>
+        <span style="font-size:12px;color:var(--muted)">{{ t.ledgerSub }}</span>
       </div>
       <ul style="list-style:none;margin:0;padding:6px 22px">
         <sc-for list="{{ ledger }}" as="row" hint-placeholder-count="4">
@@ -161,11 +161,11 @@ a:hover{color:var(--accent)}
       </ul>
       <div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)">
         <div style="padding:20px 22px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:6px">
-          <span style="font-size:12px;color:var(--muted)">Lost tonight</span>
+          <span style="font-size:12px;color:var(--muted)">{{ t.lostLabel }}</span>
           <span style="font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--accent)">$1,550</span>
         </div>
         <div style="padding:20px 22px;display:flex;flex-direction:column;gap:6px;background:var(--surface)">
-          <span style="font-size:12px;color:var(--muted)">With Bella</span>
+          <span style="font-size:12px;color:var(--muted)">{{ t.withBellaLabel }}</span>
           <span style="font-size:30px;font-weight:700;letter-spacing:-.02em">$0</span>
         </div>
       </div>
@@ -175,17 +175,17 @@ a:hover{color:var(--accent)}
 
 <section id="agents" aria-labelledby="agents-h" style="scroll-margin-top:90px;max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px">
   <div style="display:flex;flex-direction:column;gap:16px;max-width:720px;margin-bottom:48px">
-    <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">Meet the agents</p>
-    <h2 id="agents-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">Your team, multiplied.</h2>
-    <p style="margin:0;font-size:18px;line-height:1.55;color:var(--muted);text-wrap:pretty">2 AI coworkers that handle busywork for small businesses. We don't replace employees, we multiply them.</p>
+    <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">{{ t.agentsLabel }}</p>
+    <h2 id="agents-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">{{ t.agentsTitle }}</h2>
+    <p style="margin:0;font-size:18px;line-height:1.55;color:var(--muted);text-wrap:pretty">{{ t.agentsSub }}</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
     <article style="background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:clamp(28px,3.5vw,40px);display:flex;flex-direction:column;gap:24px;box-shadow:var(--shadow)">
       <div style="display:flex;align-items:center;gap:14px">
         <div aria-hidden="true" style="position:relative;width:52px;height:52px;flex:none;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
-        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Bella</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">AI Phone &amp; Text Agent</p></div>
+        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Bella</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.bellaRole }}</p></div>
       </div>
-      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">Answers every call in 2 rings. Books the job. Sends confirmation.</p>
+      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">{{ t.bellaTagline }}</p>
       <ul aria-label="Channels" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px">
         <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">WhatsApp</li>
         <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">SMS</li>
@@ -193,20 +193,18 @@ a:hover{color:var(--accent)}
         <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">iMessage</li>
       </ul>
       <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.45">
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>100% of calls answered 24/7, nights, weekends, holidays</li>
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Books directly into Google Calendar or your scheduling app</li>
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>English &amp; Spanish, natural voice, not robotic</li>
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Texts a confirmation the moment the job is booked</li>
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Transfers to you when it's a real emergency</li>
+        <sc-for list="{{ t.bellaFeatures }}" as="bf" hint-placeholder-count="5">
+          <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>{{ bf }}</li>
+        </sc-for>
       </ul>
-      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">12+ jobs recovered</strong> per month from after-hours calls alone.</p>
+      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">{{ t.bellaResultBold }}</strong> {{ t.bellaResultRest }}</p>
     </article>
     <article style="background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:clamp(28px,3.5vw,40px);display:flex;flex-direction:column;gap:24px;box-shadow:var(--shadow)">
       <div style="display:flex;align-items:center;gap:14px">
         <div aria-hidden="true" style="position:relative;width:52px;height:52px;flex:none;transform:rotate(140deg);border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
-        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Leo</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">AI Lead Follow-Up Agent</p></div>
+        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Leo</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.leoRole }}</p></div>
       </div>
-      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">Texts every new lead in 60 seconds. Follows up 14 days.</p>
+      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">{{ t.leoTagline }}</p>
       <ul aria-label="Channels" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px">
         <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">WhatsApp</li>
         <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">SMS</li>
@@ -214,13 +212,11 @@ a:hover{color:var(--accent)}
         <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">iMessage</li>
       </ul>
       <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.45">
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Texts every missed call within 60 seconds</li>
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Follows up at day 1, 3, 7, and 14</li>
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Qualifies the job and books the appointment</li>
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Re-engages cold leads with seasonal promos</li>
-        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Works over WhatsApp or SMS</li>
+        <sc-for list="{{ t.leoFeatures }}" as="lf" hint-placeholder-count="5">
+          <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>{{ lf }}</li>
+        </sc-for>
       </ul>
-      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">67% of leads</strong> who don't answer calls will respond to a text.</p>
+      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">{{ t.leoResultBold }}</strong> {{ t.leoResultRest }}</p>
     </article>
   </div>
 </section>
@@ -229,35 +225,35 @@ a:hover{color:var(--accent)}
   <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,72px);align-items:start">
     <div style="display:flex;flex-direction:column;gap:40px">
       <div style="display:flex;flex-direction:column;gap:16px">
-        <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">How it works</p>
-        <h2 id="how-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">Live in 5 days.</h2>
+        <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">{{ t.howLabel }}</p>
+        <h2 id="how-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">{{ t.howTitle }}</h2>
       </div>
       <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
         <li style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:20px;position:relative;padding-bottom:36px">
           <span aria-hidden="true" style="position:absolute;left:21px;top:44px;bottom:0;width:1px;background:var(--border)"></span>
           <span style="width:44px;height:44px;border-radius:999px;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:15px">01</span>
-          <div style="padding-top:2px"><p style="margin:0 0 4px;font-family:var(--mono);font-size:12.5px;color:var(--muted)">Today</p><h3 style="margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.015em">Book a free 15-min audit</h3><p style="margin:0;color:var(--muted);font-size:16px;line-height:1.55">We show you exactly how many calls you're losing and what it's costing you.</p></div>
+          <div style="padding-top:2px"><p style="margin:0 0 4px;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.step1when }}</p><h3 style="margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.015em">{{ t.step1title }}</h3><p style="margin:0;color:var(--muted);font-size:16px;line-height:1.55">{{ t.step1desc }}</p></div>
         </li>
         <li style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:20px;position:relative;padding-bottom:36px">
           <span aria-hidden="true" style="position:absolute;left:21px;top:44px;bottom:0;width:1px;background:var(--border)"></span>
           <span style="width:44px;height:44px;border-radius:999px;background:var(--surface);border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:15px">02</span>
-          <div style="padding-top:2px"><p style="margin:0 0 4px;font-family:var(--mono);font-size:12.5px;color:var(--muted)">Days 1–5</p><h3 style="margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.015em">We build Bella &amp; Leo</h3><p style="margin:0;color:var(--muted);font-size:16px;line-height:1.55">Trained on your services, prices &amp; schedule. You approve before anything goes live.</p></div>
+          <div style="padding-top:2px"><p style="margin:0 0 4px;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.step2when }}</p><h3 style="margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.015em">{{ t.step2title }}</h3><p style="margin:0;color:var(--muted);font-size:16px;line-height:1.55">{{ t.step2desc }}</p></div>
         </li>
         <li style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:20px">
           <span style="width:44px;height:44px;border-radius:999px;background:var(--surface);border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:15px">03</span>
-          <div style="padding-top:2px"><p style="margin:0 0 4px;font-family:var(--mono);font-size:12.5px;color:var(--muted)">Day 5</p><h3 style="margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.015em">Go live</h3><p style="margin:0;color:var(--muted);font-size:16px;line-height:1.55">Every call answered, every lead followed up, and a morning summary text every day.</p></div>
+          <div style="padding-top:2px"><p style="margin:0 0 4px;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.step3when }}</p><h3 style="margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.015em">{{ t.step3title }}</h3><p style="margin:0;color:var(--muted);font-size:16px;line-height:1.55">{{ t.step3desc }}</p></div>
         </li>
       </ol>
     </div>
     <div aria-label="Dashboard preview" role="img" style="background:var(--bg);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;font-family:var(--mono)">
       <div style="display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--border)">
         <span style="width:10px;height:10px;border-radius:50%;background:var(--border)"></span><span style="width:10px;height:10px;border-radius:50%;background:var(--border)"></span><span style="width:10px;height:10px;border-radius:50%;background:var(--border)"></span>
-        <span style="margin-left:10px;font-size:12px;color:var(--muted)">Morning summary · Tue 7:00 AM</span>
+        <span style="margin-left:10px;font-size:12px;color:var(--muted)">{{ t.dashMeta }}</span>
       </div>
       <div style="padding:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">Calls answered</span><span style="font-size:26px;font-weight:700">14</span></div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">Jobs booked</span><span style="font-size:26px;font-weight:700;color:var(--accent)">6</span></div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">Leads texted</span><span style="font-size:26px;font-weight:700">9</span></div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">{{ t.dashCalls }}</span><span style="font-size:26px;font-weight:700">14</span></div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">{{ t.dashJobs }}</span><span style="font-size:26px;font-weight:700;color:var(--accent)">6</span></div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">{{ t.dashLeads }}</span><span style="font-size:26px;font-weight:700">9</span></div>
       </div>
       <ul style="list-style:none;margin:0;padding:0 20px 20px;display:flex;flex-direction:column;gap:8px">
         <sc-for list="{{ bookings }}" as="b" hint-placeholder-count="4">
@@ -274,18 +270,18 @@ a:hover{color:var(--accent)}
 
 <section id="pricing" aria-labelledby="pricing-h" style="scroll-margin-top:90px;max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px;display:flex;flex-direction:column;align-items:center;gap:48px">
   <div style="display:flex;flex-direction:column;gap:16px;text-align:center;align-items:center">
-    <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">Pricing</p>
-    <h2 id="pricing-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">One flat price. No surprises.</h2>
+    <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">{{ t.pricingLabel }}</p>
+    <h2 id="pricing-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">{{ t.pricingTitle }}</h2>
   </div>
   <div style="width:100%;max-width:560px;background:var(--surface);border:1px solid var(--border);border-radius:32px;box-shadow:var(--shadow);padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:28px">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div style="background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px">
         <span style="font-family:var(--mono);font-size:clamp(32px,4vw,40px);font-weight:700;letter-spacing:-.03em">$499</span>
-        <span style="font-size:14px;color:var(--muted)">one-time setup</span>
+        <span style="font-size:14px;color:var(--muted)">{{ t.setupLabel }}</span>
       </div>
       <div style="background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px">
         <span style="font-family:var(--mono);font-size:clamp(32px,4vw,40px);font-weight:700;letter-spacing:-.03em">$199<span style="font-size:16px;font-weight:500;color:var(--muted)">/month</span></span>
-        <span style="font-size:14px;color:var(--muted)">after 30 days</span>
+        <span style="font-size:14px;color:var(--muted)">{{ t.afterLabel }}</span>
       </div>
     </div>
     <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;font-size:16px;line-height:1.4">
@@ -294,17 +290,17 @@ a:hover{color:var(--accent)}
       </sc-for>
     </ul>
     <div style="display:flex;flex-direction:column;gap:12px;align-items:stretch">
-      <a href="https://cal.com/ai-minds" style="background:var(--accent);color:var(--accent-ink);padding:16px 26px;border-radius:999px;font-weight:700;font-size:16px;text-align:center" style-hover="color:var(--accent-ink);filter:brightness(1.08)">Start with a Free Audit</a>
-      <p style="margin:0;text-align:center;font-family:var(--mono);font-size:12.5px;color:var(--muted)">Cancel anytime. No contract.</p>
+      <a href="https://cal.com/ai-minds" style="background:var(--accent);color:var(--accent-ink);padding:16px 26px;border-radius:999px;font-weight:700;font-size:16px;text-align:center" style-hover="color:var(--accent-ink);filter:brightness(1.08)">{{ t.pricingCta }}</a>
+      <p style="margin:0;text-align:center;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.cancelNote }}</p>
     </div>
   </div>
   <div style="width:100%;max-width:960px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px">
-    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$400</span><span style="font-size:14px;color:var(--muted)">per job</span></div>
-    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$199</span><span style="font-size:14px;color:var(--muted)">Bella/mo</span></div>
-    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700;color:var(--accent)">10×</span><span style="font-size:14px;color:var(--muted)">typical ROI</span></div>
+    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$400</span><span style="font-size:14px;color:var(--muted)">{{ t.statJob }}</span></div>
+    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$199</span><span style="font-size:14px;color:var(--muted)">{{ t.statBella }}</span></div>
+    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700;color:var(--accent)">10×</span><span style="font-size:14px;color:var(--muted)">{{ t.statRoi }}</span></div>
     <div style="border:1px solid var(--ink);border-radius:20px;padding:22px;display:flex;align-items:center;gap:14px;background:var(--surface)">
       <span aria-hidden="true" style="width:44px;height:44px;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:13px;flex:none">30</span>
-      <span style="font-weight:800;font-size:15px;line-height:1.3">30-Day Money-Back Guarantee</span>
+      <span style="font-weight:800;font-size:15px;line-height:1.3">{{ t.guarantee }}</span>
     </div>
   </div>
 </section>
@@ -312,8 +308,8 @@ a:hover{color:var(--accent)}
 <section id="faq" aria-labelledby="faq-h" style="scroll-margin-top:90px;border-top:1px solid var(--border)">
   <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px;display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px);align-items:flex-start">
     <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:16px">
-      <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">FAQ</p>
-      <h2 id="faq-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800">Questions</h2>
+      <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">{{ t.faqLabel }}</p>
+      <h2 id="faq-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800">{{ t.faqTitle }}</h2>
     </div>
     <div style="flex:2 1 520px;display:flex;flex-direction:column;border-top:1px solid var(--border);min-width:0">
       <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
@@ -337,12 +333,12 @@ a:hover{color:var(--accent)}
   <div style="position:relative;overflow:hidden;max-width:1200px;margin:0 auto;background:var(--ink);color:var(--bg);border-radius:36px;padding:clamp(48px,7vw,96px) clamp(28px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px;align-items:end">
     <div aria-hidden="true" style="position:absolute;width:420px;aspect-ratio:1;right:-120px;top:-180px;z-index:0;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
     <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:20px">
-      <h2 id="cta-h" style="margin:0;font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:-.035em;font-weight:800;text-wrap:balance">Book your free 15-min audit.</h2>
-      <p style="margin:0;font-size:18px;line-height:1.55;max-width:520px;opacity:.85;text-wrap:pretty">We show you exactly how many calls you're losing and what it's costing you. No pitch. No commitment. Just the numbers.</p>
+      <h2 id="cta-h" style="margin:0;font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:-.035em;font-weight:800;text-wrap:balance">{{ t.ctaTitle }}</h2>
+      <p style="margin:0;font-size:18px;line-height:1.55;max-width:520px;opacity:.85;text-wrap:pretty">{{ t.ctaSub }}</p>
     </div>
     <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
-      <a href="https://cal.com/ai-minds" style="background:var(--bg);color:var(--ink);padding:18px 30px;border-radius:999px;font-weight:700;font-size:17px" style-hover="color:var(--ink);background:#D3EBFB">Book a Free 15-Min Audit</a>
-      <a href="tel:+12148100799" style="color:var(--bg);font-family:var(--mono);font-size:18px;padding:6px 2px" style-hover="color:var(--accent)">or call (214) 810-0799</a>
+      <a href="https://cal.com/ai-minds" style="background:var(--bg);color:var(--ink);padding:18px 30px;border-radius:999px;font-weight:700;font-size:17px" style-hover="color:var(--ink);background:#D3EBFB">{{ t.ctaBtn }}</a>
+      <a href="tel:+12148100799" style="color:var(--bg);font-family:var(--mono);font-size:18px;padding:6px 2px" style-hover="color:var(--accent)">{{ t.ctaPhone }}</a>
     </div>
   </div>
 </section>
@@ -353,19 +349,19 @@ a:hover{color:var(--accent)}
   <div style="max-width:1200px;margin:0 auto;padding:56px 24px 32px;display:flex;flex-wrap:wrap;gap:40px 56px">
     <div style="flex:2 1 300px;display:flex;flex-direction:column;gap:16px;min-width:0">
       <a href="#top" aria-label="AI Minds home" style="display:flex;padding:16px 16px 16px 0;align-self:flex-start"><sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}"><img src="assets/logo.png" alt="AI Minds — Tech Company" style="height:40px;width:auto;display:block"></sc-if><sc-if value="{{ isDark }}"><img src="assets/logo-white.png" alt="AI Minds — Tech Company" style="height:40px;width:auto;display:block"></sc-if></a>
-      <p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5;max-width:340px">2 AI coworkers that handle busywork for small businesses. Your team, multiplied.</p>
+      <p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5;max-width:340px">{{ t.footerTagline }}</p>
     </div>
     <nav aria-label="Product" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
-      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">Product</span>
-      <a href="#agents">Agents</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">{{ t.footerProduct }}</span>
+      <a href="#agents">{{ t.navAgents }}</a><a href="#how">{{ t.navHow }}</a><a href="#pricing">{{ t.navPricing }}</a><a href="#faq">{{ t.faqLabel }}</a>
     </nav>
     <nav aria-label="Company" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
-      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">Company</span>
+      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">{{ t.footerCompany }}</span>
       <a href="mailto:luis@ai-minds.ai">luis@ai-minds.ai</a><a href="tel:+12148100799">(214) 810-0799</a><span style="color:var(--muted)">Dallas, TX</span>
     </nav>
     <nav aria-label="Get started" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
-      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">Get started</span>
-      <a href="https://cal.com/ai-minds">Book free audit</a><a href="#/es" onClick="{{ setEs }}">Español</a>
+      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">{{ t.footerGetStarted }}</span>
+      <a href="https://cal.com/ai-minds">{{ t.footerBook }}</a><a href="#/es" onClick="{{ setEs }}">{{ t.footerLang }}</a>
     </nav>
   </div>
   <div style="max-width:1200px;margin:0 auto;padding:20px 24px 32px;border-top:1px solid var(--border);font-family:var(--mono);font-size:12.5px;color:var(--muted)">© 2026 AI Minds · Dallas, TX</div>
@@ -381,7 +377,54 @@ const COPY = {
     headline: 'Never Miss Another Service Call.',
     subhead: 'Bella answers every call 24/7 — books the job, texts a confirmation, and works in English or Spanish. Your customers reach you on WhatsApp, text, or call.',
     ctaPrimary: 'Book a Free 15-Min Audit', ctaSecondary: 'See How It Works',
-    chips: ['Answers in 2 rings', 'English & Spanish', 'Live in 5 days', 'Cancel anytime']
+    chips: ['Answers in 2 rings', 'English & Spanish', 'Live in 5 days', 'Cancel anytime'],
+    problemLabel: 'The cost of a missed call',
+    stat1title: 'missed calls/day', stat1desc: 'average for a 5-person HVAC company',
+    stat2title: 'never call back', stat2desc: 'they call your competitor instead',
+    stat3title: 'lost every month', stat3desc: 'at $400/job avg × 5 missed calls/day',
+    ledgerTitle: "Tonight's missed calls", ledgerSub: 'after 6:00 PM',
+    lostLabel: 'Lost tonight', withBellaLabel: 'With Bella',
+    agentsLabel: 'Meet the agents', agentsTitle: 'Your team, multiplied.',
+    agentsSub: "2 AI coworkers that handle busywork for small businesses. We don't replace employees, we multiply them.",
+    bellaRole: 'AI Phone & Text Agent',
+    bellaTagline: 'Answers every call in 2 rings. Books the job. Sends confirmation.',
+    bellaFeatures: [
+      '100% of calls answered 24/7, nights, weekends, holidays',
+      'Books directly into Google Calendar or your scheduling app',
+      'English & Spanish, natural voice, not robotic',
+      'Texts a confirmation the moment the job is booked',
+      "Transfers to you when it's a real emergency"
+    ],
+    bellaResultBold: '12+ jobs recovered', bellaResultRest: 'per month from after-hours calls alone.',
+    leoRole: 'AI Lead Follow-Up Agent',
+    leoTagline: 'Texts every new lead in 60 seconds. Follows up 14 days.',
+    leoFeatures: [
+      'Texts every missed call within 60 seconds',
+      'Follows up at day 1, 3, 7, and 14',
+      'Qualifies the job and books the appointment',
+      'Re-engages cold leads with seasonal promos',
+      'Works over WhatsApp or SMS'
+    ],
+    leoResultBold: '67% of leads', leoResultRest: "who don't answer calls will respond to a text.",
+    howLabel: 'How it works', howTitle: 'Live in 5 days.',
+    step1when: 'Today', step1title: 'Book a free 15-min audit', step1desc: "We show you exactly how many calls you're losing and what it's costing you.",
+    step2when: 'Days 1–5', step2title: 'We build Bella & Leo', step2desc: 'Trained on your services, prices & schedule. You approve before anything goes live.',
+    step3when: 'Day 5', step3title: 'Go live', step3desc: 'Every call answered, every lead followed up, and a morning summary text every day.',
+    dashMeta: 'Morning summary · Tue 7:00 AM',
+    dashCalls: 'Calls answered', dashJobs: 'Jobs booked', dashLeads: 'Leads texted',
+    pricingLabel: 'Pricing', pricingTitle: 'One flat price. No surprises.',
+    setupLabel: 'one-time setup', afterLabel: 'after 30 days',
+    pricingCta: 'Start with a Free Audit', cancelNote: 'Cancel anytime. No contract.',
+    statJob: 'per job', statBella: 'Bella/mo', statRoi: 'typical ROI',
+    guarantee: '30-Day Money-Back Guarantee',
+    faqLabel: 'FAQ', faqTitle: 'Questions',
+    ctaTitle: 'Book your free 15-min audit.',
+    ctaSub: "We show you exactly how many calls you're losing and what it's costing you. No pitch. No commitment. Just the numbers.",
+    ctaBtn: 'Book a Free 15-Min Audit', ctaPhone: 'or call (214) 810-0799',
+    footerTagline: '2 AI coworkers that handle busywork for small businesses. Your team, multiplied.',
+    footerProduct: 'Product', footerCompany: 'Company', footerGetStarted: 'Get started',
+    footerBook: 'Book free audit', footerLang: 'Español',
+    customer: 'Customer', replay: '↻ replay'
   },
   es: {
     navAgents: 'Agentes', navHow: 'Cómo funciona', navPricing: 'Precios', headerCta: 'Auditoría gratis',
@@ -389,11 +432,62 @@ const COPY = {
     headline: 'Nunca pierdas otra llamada de servicio.',
     subhead: 'Bella contesta cada llamada 24/7 — agenda el trabajo, envía una confirmación por texto y habla inglés o español. Tus clientes te contactan por WhatsApp, texto o llamada.',
     ctaPrimary: 'Agenda una auditoría gratis de 15 min', ctaSecondary: 'Mira cómo funciona',
-    chips: ['Contesta en 2 timbres', 'Inglés y español', 'En vivo en 5 días', 'Cancela cuando quieras']
+    chips: ['Contesta en 2 timbres', 'Inglés y español', 'En vivo en 5 días', 'Cancela cuando quieras'],
+    problemLabel: 'El costo de una llamada perdida',
+    stat1title: 'llamadas perdidas/día', stat1desc: 'promedio en empresa HVAC de 5 personas',
+    stat2title: 'nunca vuelven a llamar', stat2desc: 'llaman a tu competencia en su lugar',
+    stat3title: 'perdidos cada mes', stat3desc: 'a $400/trabajo × 5 llamadas perdidas/día',
+    ledgerTitle: 'Llamadas perdidas esta noche', ledgerSub: 'después de las 6:00 PM',
+    lostLabel: 'Perdido esta noche', withBellaLabel: 'Con Bella',
+    agentsLabel: 'Conoce a los agentes', agentsTitle: 'Tu equipo, multiplicado.',
+    agentsSub: '2 compañeros de IA que se encargan del trabajo repetitivo. No reemplazamos empleados, los multiplicamos.',
+    bellaRole: 'Agente de llamadas y texto con IA',
+    bellaTagline: 'Contesta cada llamada en 2 timbres. Agenda el trabajo. Envía confirmación.',
+    bellaFeatures: [
+      '100% de las llamadas contestadas 24/7, noches, fines de semana y festivos',
+      'Agenda directamente en Google Calendar o tu app de citas',
+      'Inglés y español, voz natural, no robótica',
+      'Envía una confirmación por texto en cuanto se agenda el trabajo',
+      'Te transfiere cuando es una emergencia real'
+    ],
+    bellaResultBold: '12+ trabajos recuperados', bellaResultRest: 'por mes solo de llamadas fuera de horario.',
+    leoRole: 'Agente de seguimiento de leads con IA',
+    leoTagline: 'Manda texto a cada lead en 60 segundos. Sigue por 14 días.',
+    leoFeatures: [
+      'Manda texto a cada llamada perdida en 60 segundos',
+      'Da seguimiento el día 1, 3, 7 y 14',
+      'Califica el trabajo y agenda la cita',
+      'Reactiva leads fríos con promociones de temporada',
+      'Funciona por WhatsApp o SMS'
+    ],
+    leoResultBold: '67% de los leads', leoResultRest: 'que no contestan llamadas sí responden texto.',
+    howLabel: 'Cómo funciona', howTitle: 'En vivo en 5 días.',
+    step1when: 'Hoy', step1title: 'Agenda una auditoría gratis de 15 min', step1desc: 'Te mostramos exactamente cuántas llamadas estás perdiendo y cuánto te está costando.',
+    step2when: 'Días 1–5', step2title: 'Construimos a Bella y Leo', step2desc: 'Entrenados con tus servicios, precios y horario. Tú apruebas antes de salir en vivo.',
+    step3when: 'Día 5', step3title: 'Salir en vivo', step3desc: 'Cada llamada contestada, cada lead con seguimiento y un resumen matutino por texto cada día.',
+    dashMeta: 'Resumen matutino · Mar 7:00 AM',
+    dashCalls: 'Llamadas contestadas', dashJobs: 'Trabajos agendados', dashLeads: 'Leads contactados',
+    pricingLabel: 'Precios', pricingTitle: 'Un precio fijo. Sin sorpresas.',
+    setupLabel: 'configuración única', afterLabel: 'después de 30 días',
+    pricingCta: 'Empieza con una Auditoría Gratis', cancelNote: 'Cancela cuando quieras. Sin contrato.',
+    statJob: 'por trabajo', statBella: 'Bella/mes', statRoi: 'retorno típico',
+    guarantee: 'Garantía de devolución de 30 días',
+    faqLabel: 'Preguntas', faqTitle: 'Respuestas',
+    ctaTitle: 'Agenda tu auditoría gratis de 15 min.',
+    ctaSub: 'Te mostramos exactamente cuántas llamadas estás perdiendo y cuánto te está costando. Sin venta. Sin compromiso. Solo los números.',
+    ctaBtn: 'Agenda una Auditoría Gratis de 15 Min', ctaPhone: 'o llama al (214) 810-0799',
+    footerTagline: '2 compañeros de IA que se encargan del trabajo repetitivo. Tu equipo, multiplicado.',
+    footerProduct: 'Producto', footerCompany: 'Empresa', footerGetStarted: 'Empieza',
+    footerBook: 'Auditoría gratis', footerLang: 'English',
+    customer: 'Cliente', replay: '↻ repetir'
   }
 };
 const DEMOS = {
-  call: { label: 'Call', agent: 'Bella', initial: 'B', meta: 'Inbound call · (214) 555-0142', status: 'Live call', clock: '9:47 PM', footer: 'Answered in 2 rings',
+  call: {
+    label: { en: 'Call', es: 'Llamada' }, agent: 'Bella', initial: 'B',
+    meta: { en: 'Inbound call · (214) 555-0142', es: 'Llamada entrante · (214) 555-0142' },
+    status: { en: 'Live call', es: 'Llamada en vivo' }, clock: '9:47 PM',
+    footer: { en: 'Answered in 2 rings', es: 'Contestada en 2 timbres' },
     msgs: [
       ['a', "Thanks for calling Rivera Heating & Air, this is Bella. How can I help tonight?"],
       ['u', "My AC stopped cooling and it's 88 degrees inside."],
@@ -403,7 +497,11 @@ const DEMOS = {
       ['u', 'Yes, please.'],
       ['e', 'Job booked · Wed 8–10 AM · confirmation texted']
     ]},
-  text: { label: 'Text', agent: 'Leo', initial: 'L', meta: 'SMS · missed call follow-up', status: 'Texting', clock: '6:12 PM', footer: 'Sent 60 seconds after a missed call',
+  text: {
+    label: { en: 'Text', es: 'Texto' }, agent: 'Leo', initial: 'L',
+    meta: { en: 'SMS · missed call follow-up', es: 'SMS · seguimiento de llamada perdida' },
+    status: { en: 'Texting', es: 'Enviando texto' }, clock: '6:12 PM',
+    footer: { en: 'Sent 60 seconds after a missed call', es: 'Enviado 60 segundos después de una llamada perdida' },
     msgs: [
       ['a', 'Hi, this is Leo with Rivera Heating & Air. Sorry we missed your call. What can we help with?'],
       ['u', 'Water heater is leaking in the garage.'],
@@ -413,7 +511,11 @@ const DEMOS = {
       ['u', 'Book it.'],
       ['e', 'Job booked · Thu 1–3 PM · added to calendar']
     ]},
-  whatsapp: { label: 'WhatsApp', agent: 'Bella', initial: 'B', meta: 'WhatsApp · Español', status: 'En línea', clock: '10:31 PM', footer: 'English or Spanish, automatically',
+  whatsapp: {
+    label: { en: 'WhatsApp', es: 'WhatsApp' }, agent: 'Bella', initial: 'B',
+    meta: { en: 'WhatsApp · Español', es: 'WhatsApp · Español' },
+    status: { en: 'Online', es: 'En línea' }, clock: '10:31 PM',
+    footer: { en: 'English or Spanish, automatically', es: 'Inglés o español, automáticamente' },
     msgs: [
       ['u', 'Hola, mi calefacción no prende.'],
       ['a', 'Hola, soy Bella de Rivera Heating & Air. Lo siento. ¿Me da la dirección del servicio?'],
@@ -425,26 +527,39 @@ const DEMOS = {
     ]}
 };
 const LEDGER = [
-  { time: '6:48 PM', job: 'AC not cooling', amount: '$400' },
-  { time: '8:15 PM', job: 'Water heater leak', amount: '$350' },
-  { time: '9:52 PM', job: 'Furnace won\u2019t start', amount: '$450' },
-  { time: '11:20 PM', job: 'Clogged main line', amount: '$350' }
+  { time: '6:48 PM', job: { en: 'AC not cooling', es: 'AC no enfría' }, amount: '$400' },
+  { time: '8:15 PM', job: { en: 'Water heater leak', es: 'Fuga de calentador' }, amount: '$350' },
+  { time: '9:52 PM', job: { en: 'Furnace won’t start', es: 'Calefacción no enciende' }, amount: '$450' },
+  { time: '11:20 PM', job: { en: 'Clogged main line', es: 'Drenaje principal tapado' }, amount: '$350' }
 ];
 const BOOKINGS = [
-  { time: '8:00', job: 'AC repair · 4120 Ross Ave', by: 'Bella' },
-  { time: '10:30', job: 'Tune-up · Lakewood', by: 'Leo' },
-  { time: '1:00', job: 'Water heater · Oak Cliff', by: 'Leo' },
-  { time: '3:30', job: 'No heat · Bishop Arts', by: 'Bella' }
+  { time: '8:00', job: { en: 'AC repair · 4120 Ross Ave', es: 'Reparación AC · 4120 Ross Ave' }, by: 'Bella' },
+  { time: '10:30', job: { en: 'Tune-up · Lakewood', es: 'Mantenimiento · Lakewood' }, by: 'Leo' },
+  { time: '1:00', job: { en: 'Water heater · Oak Cliff', es: 'Calentador · Oak Cliff' }, by: 'Leo' },
+  { time: '3:30', job: { en: 'No heat · Bishop Arts', es: 'Sin calefacción · Bishop Arts' }, by: 'Bella' }
 ];
-const INCLUDED = ['Bella & Leo fully built', 'Trained on your services, prices & schedule', 'English & Spanish, 24/7', 'WhatsApp, SMS, and phone call', 'Live in 3–5 business days', 'Morning summary text every day', 'You approve before anything goes live'];
-const FAQS = [
-  ['Will my customers know it\u2019s AI?', 'Bella speaks with a natural voice in English or Spanish, so most callers simply get their job booked. If a customer asks, Bella tells them she\u2019s your AI assistant, and she transfers to you for real emergencies.'],
-  ['Does it work with WhatsApp?', 'Yes. Bella and Leo work over WhatsApp, SMS, and phone call, so customers reach you however they prefer.'],
-  ['What if I already have a receptionist?', 'We don\u2019t replace employees, we multiply them. Bella covers nights, weekends, holidays, and overflow when your receptionist is already on a call.'],
-  ['What if the AI makes a mistake?', 'You approve everything before it goes live, and you get a morning summary text every day showing each call and booking. Real emergencies are transferred straight to you.'],
-  ['Does it work with my scheduling software?', 'Bella books directly into Google Calendar or your scheduling app. We set up the connection during your 3–5 day build.'],
-  ['How fast can I cancel?', 'Anytime. There\u2019s no contract, and you\u2019re covered by our 30-Day Money-Back Guarantee.']
-];
+const INCLUDED = {
+  en: ['Bella & Leo fully built', 'Trained on your services, prices & schedule', 'English & Spanish, 24/7', 'WhatsApp, SMS, and phone call', 'Live in 3–5 business days', 'Morning summary text every day', 'You approve before anything goes live'],
+  es: ['Bella y Leo completamente construidos', 'Entrenados con tus servicios, precios y horario', 'Inglés y español, 24/7', 'WhatsApp, SMS y llamada telefónica', 'En vivo en 3–5 días hábiles', 'Resumen por texto cada mañana', 'Tú apruebas antes de salir en vivo']
+};
+const FAQS = {
+  en: [
+    ['Will my customers know it’s AI?', 'Bella speaks with a natural voice in English or Spanish, so most callers simply get their job booked. If a customer asks, Bella tells them she’s your AI assistant, and she transfers to you for real emergencies.'],
+    ['Does it work with WhatsApp?', 'Yes. Bella and Leo work over WhatsApp, SMS, and phone call, so customers reach you however they prefer.'],
+    ['What if I already have a receptionist?', 'We don’t replace employees, we multiply them. Bella covers nights, weekends, holidays, and overflow when your receptionist is already on a call.'],
+    ['What if the AI makes a mistake?', 'You approve everything before it goes live, and you get a morning summary text every day showing each call and booking. Real emergencies are transferred straight to you.'],
+    ['Does it work with my scheduling software?', 'Bella books directly into Google Calendar or your scheduling app. We set up the connection during your 3–5 day build.'],
+    ['How fast can I cancel?', 'Anytime. There’s no contract, and you’re covered by our 30-Day Money-Back Guarantee.']
+  ],
+  es: [
+    ['¿Mis clientes van a saber que es IA?', 'Bella habla con voz natural en inglés o español, así que la mayoría solo agenda su trabajo. Si un cliente pregunta, Bella le dice que es tu asistente de IA y te transfiere en emergencias reales.'],
+    ['¿Funciona con WhatsApp?', 'Sí. Bella y Leo funcionan por WhatsApp, SMS y llamada telefónica, para que tus clientes te contacten como prefieran.'],
+    ['¿Qué pasa si ya tengo una recepcionista?', 'No reemplazamos empleados, los multiplicamos. Bella cubre noches, fines de semana, festivos y desbordamiento cuando tu recepcionista ya está en una llamada.'],
+    ['¿Qué pasa si la IA comete un error?', 'Tú apruebas todo antes de salir en vivo, y recibes un resumen por texto cada mañana con cada llamada y reserva. Las emergencias reales se transfieren directamente a ti.'],
+    ['¿Funciona con mi software de citas?', 'Bella agenda directamente en Google Calendar o tu app de citas. Configuramos la conexión durante tu construcción de 3–5 días.'],
+    ['¿Qué tan rápido puedo cancelar?', 'Cuando quieras. No hay contrato y estás cubierto por nuestra Garantía de devolución de 30 días.']
+  ]
+};
 const ACCENTS = {
   'Deep sky': ['#1E5A86', '#8CC4EE'],
   'Moss': ['#2F5A3A', '#9FCB9A'],
@@ -502,17 +617,19 @@ class Component extends DCLogic {
       themeGlyph: theme === 'dark' ? '☀' : '◐', themeLabel: theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode',
       showNav: w >= 900, showHeaderCta: w >= 560,
       tabs: Object.keys(DEMOS).map(k => ({
-        label: DEMOS[k].label, active: k === tab,
+        label: DEMOS[k].label[lang] || DEMOS[k].label.en, active: k === tab,
         bg: k === tab ? 'var(--surface)' : 'transparent', fg: k === tab ? 'var(--ink)' : 'var(--muted)',
         shadow: k === tab ? '0 1px 3px rgba(0,0,0,.12)' : 'none',
         select: () => this.setState({ tab: k }, () => this.play())
       })),
-      demo: d,
-      msgs: d.msgs.slice(0, step).map(([s, text]) => ({ agent: s === 'a', user: s === 'u', event: s === 'e', text, who: s === 'a' ? d.agent : 'Customer' })),
+      demo: { ...d, status: d.status[lang] || d.status.en, meta: d.meta[lang] || d.meta.en, footer: d.footer[lang] || d.footer.en },
+      msgs: d.msgs.slice(0, step).map(([s, text]) => ({ agent: s === 'a', user: s === 'u', event: s === 'e', text, who: s === 'a' ? d.agent : COPY[lang].customer })),
       typing: step < d.msgs.length,
       replay: () => this.play(),
-      ledger: LEDGER, bookings: BOOKINGS, included: INCLUDED,
-      faqs: FAQS.map(([q, a], i) => ({ q, a, id: 'faq-' + i, open: openFaq === i, icon: openFaq === i ? '−' : '+',
+      ledger: LEDGER.map(r => ({ ...r, job: r.job[lang] || r.job.en })),
+      bookings: BOOKINGS.map(b => ({ ...b, job: b.job[lang] || b.job.en })),
+      included: INCLUDED[lang] || INCLUDED.en,
+      faqs: (FAQS[lang] || FAQS.en).map(([q, a], i) => ({ q, a, id: 'faq-' + i, open: openFaq === i, icon: openFaq === i ? '−' : '+',
         toggle: () => this.setState({ openFaq: openFaq === i ? -1 : i }) }))
     };
   }
