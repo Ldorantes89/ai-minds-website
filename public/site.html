@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AI Minds — Your team, multiplied</title>
+<meta name="description" content="Bella answers every call 24/7 for HVAC &amp; plumbing companies in Dallas, TX. English &amp; Spanish.">
+<meta property="og:title" content="AI Minds — Your team, multiplied">
+<meta property="og:description" content="2 AI coworkers that handle busywork for small businesses.">
+<meta property="og:image" content="assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F2F0;--surface:#FFFFFF;--surface-2:#ECE9E4;--ink:#16171A;--muted:#575A5E;--border:#E1DDD7;--accent:#1E5A86;--orb:radial-gradient(circle at 30% 28%,#EDB993 0,rgba(237,185,147,0) 38%),radial-gradient(circle at 52% 12%,#A79A55 0,rgba(167,154,85,0) 40%),radial-gradient(circle at 72% 48%,#D3EBFB 0,rgba(211,235,251,0) 34%),radial-gradient(circle at 20% 74%,#CDB72E 0,rgba(205,183,46,0) 32%),radial-gradient(circle at 42% 92%,#2F5A3A 0,rgba(47,90,58,0) 40%),radial-gradient(circle at 82% 82%,#1B5E8E 0,rgba(27,94,142,0) 45%),linear-gradient(160deg,#B9A576 0%,#8FB9D6 50%,#2A6488 100%);--grain:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.85%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3CfeColorMatrix values=%220 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 -.35%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');--accent-ink:#FFFFFF;--shadow:0 1px 2px rgba(20,19,15,.04),0 12px 32px -12px rgba(20,19,15,.12);--sans:'Manrope',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;color-scheme:light}
+[data-theme="dark"]{--bg:#101214;--surface:#181B1E;--surface-2:#22262A;--ink:#F2F1EE;--muted:#A6ABB0;--border:#2C3135;--accent:#8CC4EE;--accent-ink:#14130F;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -12px rgba(0,0,0,.6);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--ink);text-decoration:none}
+a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:999px}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</helmet>
+
+<div style="background:var(--bg);color:var(--ink);font-family:var(--sans);min-height:100vh">
+
+<header style="position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--border)">
+  <div style="max-width:1200px;margin:0 auto;padding:8px 24px;display:flex;align-items:center;gap:24px">
+    <a href="#top" aria-label="AI Minds home" style="display:flex;padding:16px 16px 16px 0;flex:none">
+      <sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}"><img src="assets/logo.png" alt="AI Minds — Tech Company" style="height:48px;width:auto;display:block"></sc-if><sc-if value="{{ isDark }}"><img src="assets/logo-white.png" alt="AI Minds — Tech Company" style="height:48px;width:auto;display:block"></sc-if>
+    </a>
+    <sc-if value="{{ showNav }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Primary" style="display:flex;gap:4px;margin-left:8px">
+        <a href="#agents" style="padding:8px 14px;border-radius:999px;font-size:15px;font-weight:600" style-hover="background:var(--surface-2)">{{ t.navAgents }}</a>
+        <a href="#how" style="padding:8px 14px;border-radius:999px;font-size:15px;font-weight:600" style-hover="background:var(--surface-2)">{{ t.navHow }}</a>
+        <a href="#pricing" style="padding:8px 14px;border-radius:999px;font-size:15px;font-weight:600" style-hover="background:var(--surface-2)">{{ t.navPricing }}</a>
+      </nav>
+    </sc-if>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:10px">
+      <div role="group" aria-label="Language" style="display:flex;padding:3px;border:1px solid var(--border);border-radius:999px;background:var(--surface);font-family:var(--mono);font-size:12px">
+        <button onClick="{{ setEn }}" aria-pressed="{{ isEn }}" style="border:0;cursor:pointer;padding:6px 10px;border-radius:999px;font:inherit;background:{{ enBg }};color:{{ enFg }}">en</button>
+        <button onClick="{{ setEs }}" aria-pressed="{{ isEs }}" style="border:0;cursor:pointer;padding:6px 10px;border-radius:999px;font:inherit;background:{{ esBg }};color:{{ esFg }}">es</button>
+      </div>
+      <button onClick="{{ toggleTheme }}" aria-label="{{ themeLabel }}" style="width:38px;height:38px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--ink);cursor:pointer;font-family:var(--mono);font-size:14px;display:flex;align-items:center;justify-content:center" style-hover="background:var(--surface-2)">{{ themeGlyph }}</button>
+      <sc-if value="{{ showHeaderCta }}" hint-placeholder-val="{{ true }}">
+        <a href="https://cal.com/ai-minds" style="background:var(--accent);color:var(--accent-ink);padding:11px 20px;border-radius:999px;font-weight:700;font-size:15px;white-space:nowrap;transition:transform .15s" style-hover="color:var(--accent-ink);transform:translateY(-1px);filter:brightness(1.08)">{{ t.headerCta }}</a>
+      </sc-if>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section aria-labelledby="hero-h" style="position:relative;overflow:clip;max-width:1200px;margin:0 auto;padding:clamp(48px,8vw,104px) 24px clamp(64px,9vw,120px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(40px,6vw,72px);align-items:center">
+  <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:28px;min-width:0">
+    <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px"><span style="width:8px;height:8px;background:var(--accent);flex:none"></span>{{ t.tag }}</p>
+    <h1 id="hero-h" lang="{{ lang }}" style="margin:0;font-size:clamp(44px,6.4vw,82px);line-height:1;letter-spacing:-.035em;font-weight:800;text-wrap:balance">{{ t.headline }}</h1>
+    <p style="margin:0;font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--muted);max-width:560px;text-wrap:pretty">{{ t.subhead }}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a href="https://cal.com/ai-minds" style="background:var(--accent);color:var(--accent-ink);padding:16px 26px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .15s" style-hover="color:var(--accent-ink);transform:translateY(-1px);filter:brightness(1.08)">{{ t.ctaPrimary }}</a>
+      <a href="#how" style="background:var(--surface);color:var(--ink);border:1px solid var(--border);padding:15px 26px;border-radius:999px;font-weight:700;font-size:16px" style-hover="background:var(--surface-2);color:var(--ink)">{{ t.ctaSecondary }}</a>
+    </div>
+    <ul aria-label="Highlights" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px">
+      <sc-for list="{{ t.chips }}" as="chip" hint-placeholder-count="4">
+        <li style="font-family:var(--mono);font-size:12.5px;padding:7px 12px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--ink)">{{ chip }}</li>
+      </sc-for>
+    </ul>
+  </div>
+
+  <div style="position:relative;min-width:0">
+  <div aria-hidden="true" style="position:absolute;width:min(560px,110%);aspect-ratio:1;right:-14%;top:-18%;z-index:0;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
+  <div style="position:relative;z-index:1;background:var(--surface);border:1px solid var(--border);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;min-width:0;font-family:var(--mono)">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border-bottom:1px solid var(--border);flex-wrap:wrap">
+      <div role="tablist" aria-label="Demo channel" style="display:flex;gap:4px;padding:4px;background:var(--surface-2);border-radius:999px">
+        <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="3">
+          <button role="tab" aria-selected="{{ tab.active }}" onClick="{{ tab.select }}" style="border:0;cursor:pointer;padding:8px 14px;border-radius:999px;font:inherit;font-size:13px;font-weight:500;background:{{ tab.bg }};color:{{ tab.fg }};box-shadow:{{ tab.shadow }}">{{ tab.label }}</button>
+        </sc-for>
+      </div>
+      <span style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)"><span style="width:8px;height:8px;border-radius:50%;background:#22A35A;animation:pulse 1.6s infinite"></span>{{ demo.status }}</span>
+    </div>
+    <div style="padding:14px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+      <div aria-hidden="true" style="position:relative;width:36px;height:36px;flex:none;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
+      <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+        <span style="font-size:14px;font-weight:700">{{ demo.agent }}</span>
+        <span style="font-size:12px;color:var(--muted)">{{ demo.meta }}</span>
+      </div>
+      <span style="margin-left:auto;font-size:12px;color:var(--muted)">{{ demo.clock }}</span>
+    </div>
+    <div aria-live="polite" style="padding:20px 18px;display:flex;flex-direction:column;gap:10px;min-height:380px;background:var(--bg)">
+      <sc-for list="{{ msgs }}" as="m" hint-placeholder-count="4">
+        <sc-if value="{{ m.agent }}">
+          <div style="align-self:flex-start;max-width:84%;display:flex;flex-direction:column;gap:4px;animation:msgIn .35s ease both">
+            <span style="font-size:11px;color:var(--muted)">{{ m.who }}</span>
+            <p style="margin:0;padding:11px 14px;border-radius:4px 16px 16px 16px;background:var(--surface);border:1px solid var(--border);font-size:13.5px;line-height:1.5">{{ m.text }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ m.user }}">
+          <div style="align-self:flex-end;max-width:84%;display:flex;flex-direction:column;gap:4px;align-items:flex-end;animation:msgIn .35s ease both">
+            <span style="font-size:11px;color:var(--muted)">{{ m.who }}</span>
+            <p style="margin:0;padding:11px 14px;border-radius:16px 4px 16px 16px;background:var(--ink);color:var(--bg);font-size:13.5px;line-height:1.5">{{ m.text }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ m.event }}">
+          <p style="align-self:center;margin:6px 0 0;padding:6px 12px;border-radius:999px;background:color-mix(in srgb,var(--accent) 14%,var(--surface));color:var(--ink);font-size:12px;animation:msgIn .35s ease both">{{ m.text }}</p>
+        </sc-if>
+      </sc-for>
+      <sc-if value="{{ typing }}">
+        <span aria-label="typing" style="align-self:flex-start;padding:10px 14px;border-radius:16px;background:var(--surface);border:1px solid var(--border);font-size:14px;letter-spacing:3px;color:var(--muted);animation:pulse 1s infinite">•••</span>
+      </sc-if>
+    </div>
+    <div style="padding:14px 18px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:var(--muted)">
+      <span>{{ demo.footer }}</span>
+      <button onClick="{{ replay }}" style="border:1px solid var(--border);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:12px;padding:6px 12px;border-radius:999px" style-hover="background:var(--surface-2)">↻ replay</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section aria-labelledby="problem-h" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface)">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,112px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,64px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:36px">
+      <h2 id="problem-h" style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:500">The cost of a missed call</h2>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--border);align-items:baseline">
+          <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em">3–5</span>
+          <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">missed calls/day</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">average for a 5-person HVAC company</p></div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--border);align-items:baseline">
+          <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em">67%</span>
+          <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">never call back</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">they call your competitor instead</p></div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);align-items:baseline">
+          <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em;color:var(--accent)">$18K</span>
+          <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">lost every month</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">at $400/job avg × 5 missed calls/day</p></div>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);font-family:var(--mono);overflow:hidden">
+      <div style="padding:18px 22px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <span style="font-size:14px;font-weight:700">Tonight's missed calls</span>
+        <span style="font-size:12px;color:var(--muted)">after 6:00 PM</span>
+      </div>
+      <ul style="list-style:none;margin:0;padding:6px 22px">
+        <sc-for list="{{ ledger }}" as="row" hint-placeholder-count="4">
+          <li style="display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:12px;padding:14px 0;border-bottom:1px dashed var(--border);font-size:13.5px;align-items:center">
+            <span style="color:var(--muted)">{{ row.time }}</span>
+            <span>{{ row.job }}</span>
+            <span style="font-weight:700">{{ row.amount }}</span>
+          </li>
+        </sc-for>
+      </ul>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)">
+        <div style="padding:20px 22px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:12px;color:var(--muted)">Lost tonight</span>
+          <span style="font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--accent)">$1,550</span>
+        </div>
+        <div style="padding:20px 22px;display:flex;flex-direction:column;gap:6px;background:var(--surface)">
+          <span style="font-size:12px;color:var(--muted)">With Bella</span>
+          <span style="font-size:30px;font-weight:700;letter-spacing:-.02em">$0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agents" aria-labelledby="agents-h" style="scroll-margin-top:90px;max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px">
+  <div style="display:flex;flex-direction:column;gap:16px;max-width:720px;margin-bottom:48px">
+    <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">Meet the agents</p>
+    <h2 id="agents-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">Your team, multiplied.</h2>
+    <p style="margin:0;font-size:18px;line-height:1.55;color:var(--muted);text-wrap:pretty">2 AI coworkers that handle busywork for small businesses. We don't replace employees, we multiply them.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
+    <article style="background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:clamp(28px,3.5vw,40px);display:flex;flex-direction:column;gap:24px;box-shadow:var(--shadow)">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div aria-hidden="true" style="position:relative;width:52px;height:52px;flex:none;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
+        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Bella</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">AI Phone &amp; Text Agent</p></div>
+      </div>
+      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">Answers every call in 2 rings. Books the job. Sends confirmation.</p>
+      <ul aria-label="Channels" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px">
+        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">WhatsApp</li>
+        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">SMS</li>
+        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">Phone Call</li>
+        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">iMessage</li>
+      </ul>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.45">
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>100% of calls answered 24/7, nights, weekends, holidays</li>
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Books directly into Google Calendar or your scheduling app</li>
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>English &amp; Spanish, natural voice, not robotic</li>
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Texts a confirmation the moment the job is booked</li>
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Transfers to you when it's a real emergency</li>
+      </ul>
+      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">12+ jobs recovered</strong> per month from after-hours calls alone.</p>
+    </article>
+    <article style="background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:clamp(28px,3.5vw,40px);display:flex;flex-direction:column;gap:24px;box-shadow:var(--shadow)">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div aria-hidden="true" style="position:relative;width:52px;height:52px;flex:none;transform:rotate(140deg);border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
+        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Leo</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">AI Lead Follow-Up Agent</p></div>
+      </div>
+      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">Texts every new lead in 60 seconds. Follows up 14 days.</p>
+      <ul aria-label="Channels" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px">
+        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">WhatsApp</li>
+        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">SMS</li>
+        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">Phone Call</li>
+        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">iMessage</li>
+      </ul>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.45">
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Texts every missed call within 60 seconds</li>
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Follows up at day 1, 3, 7, and 14</li>
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Qualifies the job and books the appointment</li>
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Re-engages cold leads with seasonal promos</li>
+        <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>Works over WhatsApp or SMS</li>
+      </ul>
+      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">67% of leads</strong> who don't answer calls will respond to a text.</p>
+    </article>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h" style="scroll-margin-top:90px;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,72px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">How it works</p>
+        <h2 id="how-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">Live in 5 days.</h2>
+      </div>
+      <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+        <li style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:20px;position:relative;padding-bottom:36px">
+          <span aria-hidden="true" style="position:absolute;left:21px;top:44px;bottom:0;width:1px;background:var(--border)"></span>
+          <span style="width:44px;height:44px;border-radius:999px;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:15px">01</span>
+          <div style="padding-top:2px"><p style="margin:0 0 4px;font-family:var(--mono);font-size:12.5px;color:var(--muted)">Today</p><h3 style="margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.015em">Book a free 15-min audit</h3><p style="margin:0;color:var(--muted);font-size:16px;line-height:1.55">We show you exactly how many calls you're losing and what it's costing you.</p></div>
+        </li>
+        <li style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:20px;position:relative;padding-bottom:36px">
+          <span aria-hidden="true" style="position:absolute;left:21px;top:44px;bottom:0;width:1px;background:var(--border)"></span>
+          <span style="width:44px;height:44px;border-radius:999px;background:var(--surface);border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:15px">02</span>
+          <div style="padding-top:2px"><p style="margin:0 0 4px;font-family:var(--mono);font-size:12.5px;color:var(--muted)">Days 1–5</p><h3 style="margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.015em">We build Bella &amp; Leo</h3><p style="margin:0;color:var(--muted);font-size:16px;line-height:1.55">Trained on your services, prices &amp; schedule. You approve before anything goes live.</p></div>
+        </li>
+        <li style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:20px">
+          <span style="width:44px;height:44px;border-radius:999px;background:var(--surface);border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:15px">03</span>
+          <div style="padding-top:2px"><p style="margin:0 0 4px;font-family:var(--mono);font-size:12.5px;color:var(--muted)">Day 5</p><h3 style="margin:0 0 8px;font-size:21px;font-weight:800;letter-spacing:-.015em">Go live</h3><p style="margin:0;color:var(--muted);font-size:16px;line-height:1.55">Every call answered, every lead followed up, and a morning summary text every day.</p></div>
+        </li>
+      </ol>
+    </div>
+    <div aria-label="Dashboard preview" role="img" style="background:var(--bg);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;font-family:var(--mono)">
+      <div style="display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--border)">
+        <span style="width:10px;height:10px;border-radius:50%;background:var(--border)"></span><span style="width:10px;height:10px;border-radius:50%;background:var(--border)"></span><span style="width:10px;height:10px;border-radius:50%;background:var(--border)"></span>
+        <span style="margin-left:10px;font-size:12px;color:var(--muted)">Morning summary · Tue 7:00 AM</span>
+      </div>
+      <div style="padding:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">Calls answered</span><span style="font-size:26px;font-weight:700">14</span></div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">Jobs booked</span><span style="font-size:26px;font-weight:700;color:var(--accent)">6</span></div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">Leads texted</span><span style="font-size:26px;font-weight:700">9</span></div>
+      </div>
+      <ul style="list-style:none;margin:0;padding:0 20px 20px;display:flex;flex-direction:column;gap:8px">
+        <sc-for list="{{ bookings }}" as="b" hint-placeholder-count="4">
+          <li style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font-size:12.5px">
+            <span style="font-weight:700">{{ b.time }}</span>
+            <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ b.job }}</span>
+            <span style="padding:3px 8px;border-radius:999px;background:var(--surface-2);font-size:11px">{{ b.by }}</span>
+          </li>
+        </sc-for>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" aria-labelledby="pricing-h" style="scroll-margin-top:90px;max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px;display:flex;flex-direction:column;align-items:center;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:16px;text-align:center;align-items:center">
+    <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">Pricing</p>
+    <h2 id="pricing-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">One flat price. No surprises.</h2>
+  </div>
+  <div style="width:100%;max-width:560px;background:var(--surface);border:1px solid var(--border);border-radius:32px;box-shadow:var(--shadow);padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:28px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px">
+        <span style="font-family:var(--mono);font-size:clamp(32px,4vw,40px);font-weight:700;letter-spacing:-.03em">$499</span>
+        <span style="font-size:14px;color:var(--muted)">one-time setup</span>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px">
+        <span style="font-family:var(--mono);font-size:clamp(32px,4vw,40px);font-weight:700;letter-spacing:-.03em">$199<span style="font-size:16px;font-weight:500;color:var(--muted)">/month</span></span>
+        <span style="font-size:14px;color:var(--muted)">after 30 days</span>
+      </div>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;font-size:16px;line-height:1.4">
+      <sc-for list="{{ included }}" as="inc" hint-placeholder-count="7">
+        <li style="display:flex;gap:12px;align-items:flex-start"><span aria-hidden="true" style="width:20px;height:20px;border-radius:999px;background:color-mix(in srgb,var(--accent) 16%,var(--surface));color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex:none;margin-top:1px">✓</span>{{ inc }}</li>
+      </sc-for>
+    </ul>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:stretch">
+      <a href="https://cal.com/ai-minds" style="background:var(--accent);color:var(--accent-ink);padding:16px 26px;border-radius:999px;font-weight:700;font-size:16px;text-align:center" style-hover="color:var(--accent-ink);filter:brightness(1.08)">Start with a Free Audit</a>
+      <p style="margin:0;text-align:center;font-family:var(--mono);font-size:12.5px;color:var(--muted)">Cancel anytime. No contract.</p>
+    </div>
+  </div>
+  <div style="width:100%;max-width:960px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px">
+    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$400</span><span style="font-size:14px;color:var(--muted)">per job</span></div>
+    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$199</span><span style="font-size:14px;color:var(--muted)">Bella/mo</span></div>
+    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700;color:var(--accent)">10×</span><span style="font-size:14px;color:var(--muted)">typical ROI</span></div>
+    <div style="border:1px solid var(--ink);border-radius:20px;padding:22px;display:flex;align-items:center;gap:14px;background:var(--surface)">
+      <span aria-hidden="true" style="width:44px;height:44px;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:13px;flex:none">30</span>
+      <span style="font-weight:800;font-size:15px;line-height:1.3">30-Day Money-Back Guarantee</span>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h" style="scroll-margin-top:90px;border-top:1px solid var(--border)">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px;display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px);align-items:flex-start">
+    <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:16px">
+      <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">FAQ</p>
+      <h2 id="faq-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800">Questions</h2>
+    </div>
+    <div style="flex:2 1 520px;display:flex;flex-direction:column;border-top:1px solid var(--border);min-width:0">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+        <div style="border-bottom:1px solid var(--border)">
+          <h3 style="margin:0">
+            <button onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" aria-controls="{{ f.id }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;background:none;border:0;cursor:pointer;color:var(--ink);font:inherit;font-size:clamp(17px,1.6vw,20px);font-weight:700;text-align:left;border-radius:8px">
+              <span>{{ f.q }}</span>
+              <span aria-hidden="true" style="width:32px;height:32px;border-radius:999px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:16px;flex:none">{{ f.icon }}</span>
+            </button>
+          </h3>
+          <sc-if value="{{ f.open }}">
+            <p id="{{ f.id }}" style="margin:0;padding:0 56px 26px 0;color:var(--muted);font-size:16px;line-height:1.6;text-wrap:pretty">{{ f.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="cta-h" style="padding:0 24px clamp(72px,10vw,120px)">
+  <div style="position:relative;overflow:hidden;max-width:1200px;margin:0 auto;background:var(--ink);color:var(--bg);border-radius:36px;padding:clamp(48px,7vw,96px) clamp(28px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px;align-items:end">
+    <div aria-hidden="true" style="position:absolute;width:420px;aspect-ratio:1;right:-120px;top:-180px;z-index:0;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:20px">
+      <h2 id="cta-h" style="margin:0;font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:-.035em;font-weight:800;text-wrap:balance">Book your free 15-min audit.</h2>
+      <p style="margin:0;font-size:18px;line-height:1.55;max-width:520px;opacity:.85;text-wrap:pretty">We show you exactly how many calls you're losing and what it's costing you. No pitch. No commitment. Just the numbers.</p>
+    </div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+      <a href="https://cal.com/ai-minds" style="background:var(--bg);color:var(--ink);padding:18px 30px;border-radius:999px;font-weight:700;font-size:17px" style-hover="color:var(--ink);background:#D3EBFB">Book a Free 15-Min Audit</a>
+      <a href="tel:+12148100799" style="color:var(--bg);font-family:var(--mono);font-size:18px;padding:6px 2px" style-hover="color:var(--accent)">or call (214) 810-0799</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="border-top:1px solid var(--border);background:var(--surface)">
+  <div style="max-width:1200px;margin:0 auto;padding:56px 24px 32px;display:flex;flex-wrap:wrap;gap:40px 56px">
+    <div style="flex:2 1 300px;display:flex;flex-direction:column;gap:16px;min-width:0">
+      <a href="#top" aria-label="AI Minds home" style="display:flex;padding:16px 16px 16px 0;align-self:flex-start"><sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}"><img src="assets/logo.png" alt="AI Minds — Tech Company" style="height:40px;width:auto;display:block"></sc-if><sc-if value="{{ isDark }}"><img src="assets/logo-white.png" alt="AI Minds — Tech Company" style="height:40px;width:auto;display:block"></sc-if></a>
+      <p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5;max-width:340px">2 AI coworkers that handle busywork for small businesses. Your team, multiplied.</p>
+    </div>
+    <nav aria-label="Product" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
+      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">Product</span>
+      <a href="#agents">Agents</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    </nav>
+    <nav aria-label="Company" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
+      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">Company</span>
+      <a href="mailto:luis@ai-minds.ai">luis@ai-minds.ai</a><a href="tel:+12148100799">(214) 810-0799</a><span style="color:var(--muted)">Dallas, TX</span>
+    </nav>
+    <nav aria-label="Get started" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
+      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">Get started</span>
+      <a href="https://cal.com/ai-minds">Book free audit</a><a href="#/es" onClick="{{ setEs }}">Español</a>
+    </nav>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:20px 24px 32px;border-top:1px solid var(--border);font-family:var(--mono);font-size:12.5px;color:var(--muted)">© 2026 AI Minds · Dallas, TX</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Deep sky&quot;,&quot;Moss&quot;,&quot;Clay&quot;],&quot;default&quot;:&quot;Deep sky&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;demoAutoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const COPY = {
+  en: {
+    navAgents: 'Agents', navHow: 'How it works', navPricing: 'Pricing', headerCta: 'Book free audit',
+    tag: 'For HVAC & Plumbing Companies · Dallas, TX',
+    headline: 'Never Miss Another Service Call.',
+    subhead: 'Bella answers every call 24/7 — books the job, texts a confirmation, and works in English or Spanish. Your customers reach you on WhatsApp, text, or call.',
+    ctaPrimary: 'Book a Free 15-Min Audit', ctaSecondary: 'See How It Works',
+    chips: ['Answers in 2 rings', 'English & Spanish', 'Live in 5 days', 'Cancel anytime']
+  },
+  es: {
+    navAgents: 'Agentes', navHow: 'Cómo funciona', navPricing: 'Precios', headerCta: 'Auditoría gratis',
+    tag: 'Para empresas de HVAC y plomería · Dallas, TX',
+    headline: 'Nunca pierdas otra llamada de servicio.',
+    subhead: 'Bella contesta cada llamada 24/7 — agenda el trabajo, envía una confirmación por texto y habla inglés o español. Tus clientes te contactan por WhatsApp, texto o llamada.',
+    ctaPrimary: 'Agenda una auditoría gratis de 15 min', ctaSecondary: 'Mira cómo funciona',
+    chips: ['Contesta en 2 timbres', 'Inglés y español', 'En vivo en 5 días', 'Cancela cuando quieras']
+  }
+};
+const DEMOS = {
+  call: { label: 'Call', agent: 'Bella', initial: 'B', meta: 'Inbound call · (214) 555-0142', status: 'Live call', clock: '9:47 PM', footer: 'Answered in 2 rings',
+    msgs: [
+      ['a', "Thanks for calling Rivera Heating & Air, this is Bella. How can I help tonight?"],
+      ['u', "My AC stopped cooling and it's 88 degrees inside."],
+      ['a', "I'm sorry, let's get a tech out to you. What's the service address?"],
+      ['u', '4120 Ross Ave, Dallas.'],
+      ['a', 'I have tomorrow 8–10 AM open. Want me to book it?'],
+      ['u', 'Yes, please.'],
+      ['e', 'Job booked · Wed 8–10 AM · confirmation texted']
+    ]},
+  text: { label: 'Text', agent: 'Leo', initial: 'L', meta: 'SMS · missed call follow-up', status: 'Texting', clock: '6:12 PM', footer: 'Sent 60 seconds after a missed call',
+    msgs: [
+      ['a', 'Hi, this is Leo with Rivera Heating & Air. Sorry we missed your call. What can we help with?'],
+      ['u', 'Water heater is leaking in the garage.'],
+      ['a', 'Got it. Is it a tank or tankless unit, and is the water shut off?'],
+      ['u', "Tank. Yes it's off."],
+      ['a', 'We can be there tomorrow 1–3 PM. Should I book it?'],
+      ['u', 'Book it.'],
+      ['e', 'Job booked · Thu 1–3 PM · added to calendar']
+    ]},
+  whatsapp: { label: 'WhatsApp', agent: 'Bella', initial: 'B', meta: 'WhatsApp · Español', status: 'En línea', clock: '10:31 PM', footer: 'English or Spanish, automatically',
+    msgs: [
+      ['u', 'Hola, mi calefacción no prende.'],
+      ['a', 'Hola, soy Bella de Rivera Heating & Air. Lo siento. ¿Me da la dirección del servicio?'],
+      ['u', '2210 Jefferson Blvd, Dallas.'],
+      ['a', 'Tengo mañana de 9 a 11 AM. ¿Se lo agendo?'],
+      ['u', 'Sí, por favor.'],
+      ['a', 'Listo. Le envié la confirmación por mensaje.'],
+      ['e', 'Trabajo agendado · Jue 9–11 AM']
+    ]}
+};
+const LEDGER = [
+  { time: '6:48 PM', job: 'AC not cooling', amount: '$400' },
+  { time: '8:15 PM', job: 'Water heater leak', amount: '$350' },
+  { time: '9:52 PM', job: 'Furnace won\u2019t start', amount: '$450' },
+  { time: '11:20 PM', job: 'Clogged main line', amount: '$350' }
+];
+const BOOKINGS = [
+  { time: '8:00', job: 'AC repair · 4120 Ross Ave', by: 'Bella' },
+  { time: '10:30', job: 'Tune-up · Lakewood', by: 'Leo' },
+  { time: '1:00', job: 'Water heater · Oak Cliff', by: 'Leo' },
+  { time: '3:30', job: 'No heat · Bishop Arts', by: 'Bella' }
+];
+const INCLUDED = ['Bella & Leo fully built', 'Trained on your services, prices & schedule', 'English & Spanish, 24/7', 'WhatsApp, SMS, and phone call', 'Live in 3–5 business days', 'Morning summary text every day', 'You approve before anything goes live'];
+const FAQS = [
+  ['Will my customers know it\u2019s AI?', 'Bella speaks with a natural voice in English or Spanish, so most callers simply get their job booked. If a customer asks, Bella tells them she\u2019s your AI assistant, and she transfers to you for real emergencies.'],
+  ['Does it work with WhatsApp?', 'Yes. Bella and Leo work over WhatsApp, SMS, and phone call, so customers reach you however they prefer.'],
+  ['What if I already have a receptionist?', 'We don\u2019t replace employees, we multiply them. Bella covers nights, weekends, holidays, and overflow when your receptionist is already on a call.'],
+  ['What if the AI makes a mistake?', 'You approve everything before it goes live, and you get a morning summary text every day showing each call and booking. Real emergencies are transferred straight to you.'],
+  ['Does it work with my scheduling software?', 'Bella books directly into Google Calendar or your scheduling app. We set up the connection during your 3–5 day build.'],
+  ['How fast can I cancel?', 'Anytime. There\u2019s no contract, and you\u2019re covered by our 30-Day Money-Back Guarantee.']
+];
+const ACCENTS = {
+  'Deep sky': ['#1E5A86', '#8CC4EE'],
+  'Moss': ['#2F5A3A', '#9FCB9A'],
+  'Clay': ['#9A4E2C', '#EDB993']
+};
+
+class Component extends DCLogic {
+  state = { lang: 'en', theme: 'light', tab: 'call', step: 0, w: 1200, openFaq: 0 };
+
+  componentDidMount() {
+    const fromHash = () => this.setState({ lang: location.hash.startsWith('#/es') ? 'es' : 'en' });
+    fromHash();
+    this._hash = fromHash; window.addEventListener('hashchange', fromHash);
+    const dark = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches;
+    this.setState({ theme: dark ? 'dark' : 'light', w: window.innerWidth });
+    this._rs = () => this.setState({ w: window.innerWidth }); window.addEventListener('resize', this._rs);
+    this.reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.play();
+    this.applyVars();
+  }
+  componentDidUpdate() { this.applyVars(); }
+  componentWillUnmount() { clearInterval(this.timer); window.removeEventListener('resize', this._rs); window.removeEventListener('hashchange', this._hash); }
+  applyVars() {
+    const r = document.documentElement, t = this.state.theme;
+    r.dataset.theme = t; r.lang = this.state.lang;
+    const a = ACCENTS[this.props.accent] || ACCENTS['Deep sky'];
+    r.style.setProperty('--accent', t === 'dark' ? a[1] : a[0]);
+  }
+  play() {
+    clearInterval(this.timer);
+    const n = DEMOS[this.state.tab].msgs.length;
+    if (this.reduced || this.props.demoAutoplay === false) { this.setState({ step: n }); return; }
+    this.setState({ step: 1 });
+    this.timer = setInterval(() => {
+      if (this.state.step >= DEMOS[this.state.tab].msgs.length) { clearInterval(this.timer); return; }
+      this.setState(s => ({ step: s.step + 1 }));
+    }, 1300);
+  }
+  setLang(l) {
+    history.replaceState(null, '', l === 'es' ? '#/es' : location.pathname + location.search);
+    this.setState({ lang: l });
+  }
+
+  renderVals() {
+    const { lang, theme, tab, step, w, openFaq } = this.state;
+    const d = DEMOS[tab];
+    const on = { bg: 'var(--ink)', fg: 'var(--bg)' }, off = { bg: 'transparent', fg: 'var(--muted)' };
+    return {
+      t: COPY[lang], lang, isEn: lang === 'en', isEs: lang === 'es',
+      enBg: lang === 'en' ? on.bg : off.bg, enFg: lang === 'en' ? on.fg : off.fg,
+      esBg: lang === 'es' ? on.bg : off.bg, esFg: lang === 'es' ? on.fg : off.fg,
+      setEn: () => this.setLang('en'), setEs: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setLang('es'); },
+      isDark: theme === 'dark', isLight: theme !== 'dark',
+      toggleTheme: () => this.setState(s => ({ theme: s.theme === 'dark' ? 'light' : 'dark' })),
+      themeGlyph: theme === 'dark' ? '☀' : '◐', themeLabel: theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode',
+      showNav: w >= 900, showHeaderCta: w >= 560,
+      tabs: Object.keys(DEMOS).map(k => ({
+        label: DEMOS[k].label, active: k === tab,
+        bg: k === tab ? 'var(--surface)' : 'transparent', fg: k === tab ? 'var(--ink)' : 'var(--muted)',
+        shadow: k === tab ? '0 1px 3px rgba(0,0,0,.12)' : 'none',
+        select: () => this.setState({ tab: k }, () => this.play())
+      })),
+      demo: d,
+      msgs: d.msgs.slice(0, step).map(([s, text]) => ({ agent: s === 'a', user: s === 'u', event: s === 'e', text, who: s === 'a' ? d.agent : 'Customer' })),
+      typing: step < d.msgs.length,
+      replay: () => this.play(),
+      ledger: LEDGER, bookings: BOOKINGS, included: INCLUDED,
+      faqs: FAQS.map(([q, a], i) => ({ q, a, id: 'faq-' + i, open: openFaq === i, icon: openFaq === i ? '−' : '+',
+        toggle: () => this.setState({ openFaq: openFaq === i ? -1 : i }) }))
+    };
+  }
+}
+</script>
+</body>
+</html>
