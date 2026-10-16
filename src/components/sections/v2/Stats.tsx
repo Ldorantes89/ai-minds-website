@@ -24,7 +24,7 @@ export function V2Stats({ lang }: { lang: "en" | "es" }) {
   const t = lang === "es" ? ES : EN;
 
   return (
-    <section style={{ background: "#f8f9fa" }} className="py-16 sm:py-20">
+    <section style={{ background: "#EFF6FF" }} className="py-16 sm:py-20">
       <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <p
           className="text-center text-[11px] font-black uppercase tracking-[0.2em] mb-10"
@@ -40,22 +40,22 @@ export function V2Stats({ lang }: { lang: "en" | "es" }) {
               className="rounded-2xl p-6 text-center"
               style={{
                 background: "#ffffff",
-                border: i === 3 ? "2px solid #F97316" : "1px solid #E5E7EB",
-                boxShadow: i === 3 ? "0 8px 32px rgba(249,115,22,0.15)" : "0 2px 12px rgba(0,0,0,0.04)",
+                border: i === 3 ? "2px solid #2563EB" : "1px solid #E5E7EB",
+                boxShadow: i === 3 ? "0 8px 32px rgba(37,99,235,0.15)" : "0 2px 12px rgba(0,0,0,0.04)",
               }}
             >
               <p
                 className="font-black leading-none"
                 style={{
                   fontSize: "clamp(2rem, 4vw, 2.8rem)",
-                  color: i === 3 ? "#F97316" : i < 3 ? "#EF4444" : "#0F2044",
+                  color: i === 3 ? "#2563EB" : i < 3 ? "#EF4444" : "#1E3A5F",
                 }}
               >
                 {i === 3 ? "$" : ""}{s.number}
               </p>
               <p
                 className="font-bold text-[13px] mt-2"
-                style={{ color: "#0F2044" }}
+                style={{ color: "#1E3A5F" }}
               >
                 {s.unit}
               </p>

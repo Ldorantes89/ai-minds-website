@@ -77,7 +77,7 @@ export function V2Faq({ lang }: { lang: "en" | "es" }) {
             className="inline-block rounded-full px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.15em] mb-4"
             style={{
               background: "rgba(15,32,68,0.07)",
-              color: "#0F2044",
+              color: "#0F1F35",
               border: "1px solid rgba(15,32,68,0.15)",
             }}
           >
@@ -85,7 +85,7 @@ export function V2Faq({ lang }: { lang: "en" | "es" }) {
           </span>
           <h2
             className="font-black tracking-tight"
-            style={{ fontSize: "clamp(1.9rem, 4vw, 2.6rem)", color: "#0F2044", lineHeight: 1.1 }}
+            style={{ fontSize: "clamp(1.9rem, 4vw, 2.6rem)", color: "#0F1F35", lineHeight: 1.1 }}
           >
             {t.title}
           </h2>
@@ -99,8 +99,8 @@ export function V2Faq({ lang }: { lang: "en" | "es" }) {
                 key={i}
                 className="rounded-2xl overflow-hidden transition-all duration-200"
                 style={{
-                  border: isOpen ? "2px solid #F97316" : "1px solid #E5E7EB",
-                  background: isOpen ? "#FFFBF7" : "#fff",
+                  border: isOpen ? "2px solid #2563EB" : "1px solid #E5E7EB",
+                  background: isOpen ? "#EFF6FF" : "#fff",
                 }}
               >
                 <button
@@ -111,14 +111,14 @@ export function V2Faq({ lang }: { lang: "en" | "es" }) {
                 >
                   <span
                     className="font-bold text-[15px] leading-snug"
-                    style={{ color: "#0F2044" }}
+                    style={{ color: "#0F1F35" }}
                   >
                     {faq.q}
                   </span>
                   <span
                     className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full"
                     style={{
-                      background: isOpen ? "#F97316" : "#F3F4F6",
+                      background: isOpen ? "#2563EB" : "#F3F4F6",
                       color: isOpen ? "white" : "#6B7280",
                     }}
                   >

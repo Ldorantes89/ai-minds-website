@@ -47,16 +47,16 @@ export function V2Hero({ lang }: { lang: "en" | "es" }) {
 
   return (
     <section
-      style={{ background: "#0F2044" }}
+      style={{ background: "#0F1F35" }}
       className="relative overflow-hidden pt-28 pb-0 sm:pt-36"
     >
-      {/* Orange diagonal accent */}
+      {/* Blue diagonal accent */}
       <div
         aria-hidden
         className="pointer-events-none absolute bottom-0 right-0 w-1/2 h-full opacity-10"
         style={{
           background:
-            "linear-gradient(135deg, transparent 40%, #F97316 100%)",
+            "linear-gradient(135deg, transparent 40%, #2563EB 100%)",
         }}
       />
 
@@ -67,9 +67,9 @@ export function V2Hero({ lang }: { lang: "en" | "es" }) {
             <span
               className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[12px] font-bold uppercase tracking-widest mb-6"
               style={{
-                background: "rgba(249,115,22,0.15)",
-                border: "1px solid rgba(249,115,22,0.4)",
-                color: "#F97316",
+                background: "rgba(37,99,235,0.15)",
+                border: "1px solid rgba(37,99,235,0.4)",
+                color: "#60A5FA",
               }}
             >
               <PhoneCall className="h-3 w-3" />
@@ -82,7 +82,7 @@ export function V2Hero({ lang }: { lang: "en" | "es" }) {
             >
               {t.h1a}
               <br />
-              <span style={{ color: "#F97316" }}>{t.h1b}</span>
+              <span style={{ color: "#60A5FA" }}>{t.h1b}</span>
             </h1>
 
             <p
@@ -125,10 +125,10 @@ export function V2Hero({ lang }: { lang: "en" | "es" }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl font-bold text-white transition-all hover:opacity-90 active:scale-[0.98]"
                 style={{
-                  background: "#F97316",
+                  background: "#2563EB",
                   padding: "14px 28px",
                   fontSize: "0.95rem",
-                  boxShadow: "0 8px 24px rgba(249,115,22,0.4)",
+                  boxShadow: "0 8px 24px rgba(37,99,235,0.45)",
                 }}
               >
                 {t.cta1}
@@ -158,7 +158,7 @@ export function V2Hero({ lang }: { lang: "en" | "es" }) {
                 >
                   <span
                     className="h-1.5 w-1.5 rounded-full"
-                    style={{ background: "#F97316" }}
+                    style={{ background: "#2563EB" }}
                   />
                   {label}
                 </span>
@@ -294,13 +294,13 @@ export function V2Hero({ lang }: { lang: "en" | "es" }) {
               <div
                 className="mx-4 mb-4 rounded-xl p-4 text-center"
                 style={{
-                  background: "rgba(249,115,22,0.1)",
-                  border: "1px solid rgba(249,115,22,0.3)",
+                  background: "rgba(37,99,235,0.1)",
+                  border: "1px solid rgba(37,99,235,0.3)",
                 }}
               >
                 <p
                   className="font-black text-[28px] leading-none"
-                  style={{ color: "#F97316" }}
+                  style={{ color: "#60A5FA" }}
                 >
                   $0
                 </p>
@@ -319,14 +319,14 @@ export function V2Hero({ lang }: { lang: "en" | "es" }) {
       </div>
 
       {/* Bottom wave into white */}
-      <div style={{ background: "#0F2044", lineHeight: 0 }}>
+      <div style={{ background: "#0F1F35", lineHeight: 0 }}>
         <svg
           viewBox="0 0 1440 60"
           preserveAspectRatio="none"
           className="w-full"
           style={{ display: "block", height: "60px" }}
         >
-          <path d="M0,60 L1440,60 L1440,20 Q720,-20 0,20 Z" fill="#f8f9fa" />
+          <path d="M0,60 L1440,60 L1440,20 Q720,-20 0,20 Z" fill="#EFF6FF" />
         </svg>
       </div>
     </section>

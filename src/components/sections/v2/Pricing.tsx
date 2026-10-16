@@ -55,22 +55,22 @@ export function V2Pricing({ lang }: { lang: "en" | "es" }) {
   const t = lang === "es" ? ES : EN;
 
   return (
-    <section style={{ background: "#f8f9fa" }} className="py-20 sm:py-28" id="pricing">
+    <section style={{ background: "#EFF6FF" }} className="py-20 sm:py-28" id="pricing">
       <div className="mx-auto w-full max-w-5xl px-6 lg:px-8">
         <div className="text-center mb-12">
           <span
             className="inline-block rounded-full px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.15em] mb-4"
             style={{
-              background: "rgba(249,115,22,0.1)",
-              color: "#F97316",
-              border: "1px solid rgba(249,115,22,0.25)",
+              background: "rgba(37,99,235,0.1)",
+              color: "#2563EB",
+              border: "1px solid rgba(37,99,235,0.25)",
             }}
           >
             {t.eyebrow}
           </span>
           <h2
             className="font-black tracking-tight text-balance"
-            style={{ fontSize: "clamp(1.9rem, 4vw, 2.8rem)", color: "#0F2044", lineHeight: 1.1 }}
+            style={{ fontSize: "clamp(1.9rem, 4vw, 2.8rem)", color: "#0F1F35", lineHeight: 1.1 }}
           >
             {t.title}
           </h2>
@@ -81,13 +81,13 @@ export function V2Pricing({ lang }: { lang: "en" | "es" }) {
           <div
             className="rounded-3xl overflow-hidden"
             style={{
-              border: "2px solid #F97316",
-              boxShadow: "0 16px 48px rgba(249,115,22,0.2)",
+              border: "2px solid #2563EB",
+              boxShadow: "0 16px 48px rgba(37,99,235,0.2)",
             }}
           >
             <div
               className="px-8 py-7"
-              style={{ background: "#F97316" }}
+              style={{ background: "#2563EB" }}
             >
               <div className="flex items-baseline gap-2">
                 <span className="font-black text-white" style={{ fontSize: "3.5rem", lineHeight: 1 }}>
@@ -110,7 +110,7 @@ export function V2Pricing({ lang }: { lang: "en" | "es" }) {
                   <li key={f} className="flex items-start gap-3">
                     <CheckCircle
                       className="h-4 w-4 mt-0.5 shrink-0"
-                      style={{ color: "#F97316" }}
+                      style={{ color: "#2563EB" }}
                     />
                     <span className="text-[13.5px]" style={{ color: "#374151" }}>
                       {f}
@@ -125,7 +125,7 @@ export function V2Pricing({ lang }: { lang: "en" | "es" }) {
                 rel="noopener noreferrer"
                 className="mt-7 flex items-center justify-center gap-2 rounded-xl font-bold text-white transition-all hover:opacity-90 w-full"
                 style={{
-                  background: "#0F2044",
+                  background: "#0F1F35",
                   padding: "15px 24px",
                   fontSize: "0.95rem",
                 }}
@@ -142,7 +142,7 @@ export function V2Pricing({ lang }: { lang: "en" | "es" }) {
             <div
               className="rounded-2xl p-7"
               style={{
-                background: "#0F2044",
+                background: "#0F1F35",
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
@@ -158,8 +158,8 @@ export function V2Pricing({ lang }: { lang: "en" | "es" }) {
                   { n: "$199", l: lang === "es" ? "Bella/mes" : "Bella/mo" },
                   { n: "10×", l: lang === "es" ? "retorno típico" : "typical ROI" },
                 ].map((s) => (
-                  <div key={s.n} className="text-center rounded-xl p-3" style={{ background: "rgba(249,115,22,0.12)" }}>
-                    <p className="font-black text-[1.4rem]" style={{ color: "#F97316" }}>{s.n}</p>
+                  <div key={s.n} className="text-center rounded-xl p-3" style={{ background: "rgba(37,99,235,0.12)" }}>
+                    <p className="font-black text-[1.4rem]" style={{ color: "#2563EB" }}>{s.n}</p>
                     <p className="text-[11px] mt-0.5" style={{ color: "rgba(255,255,255,0.5)" }}>{s.l}</p>
                   </div>
                 ))}

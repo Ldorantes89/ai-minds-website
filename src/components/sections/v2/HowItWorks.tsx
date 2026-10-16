@@ -58,15 +58,15 @@ export function V2HowItWorks({ lang }: { lang: "en" | "es" }) {
   const t = lang === "es" ? ES : EN;
 
   return (
-    <section style={{ background: "#0F2044" }} className="py-20 sm:py-28" id="how-it-works">
+    <section style={{ background: "#0F1F35" }} className="py-20 sm:py-28" id="how-it-works">
       <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div className="text-center mb-14">
           <span
             className="inline-block rounded-full px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.15em] mb-4"
             style={{
-              background: "rgba(249,115,22,0.15)",
-              color: "#F97316",
-              border: "1px solid rgba(249,115,22,0.3)",
+              background: "rgba(37,99,235,0.15)",
+              color: "#2563EB",
+              border: "1px solid rgba(37,99,235,0.3)",
             }}
           >
             {t.eyebrow}
@@ -93,7 +93,7 @@ export function V2HowItWorks({ lang }: { lang: "en" | "es" }) {
               {i < 2 && (
                 <div
                   className="hidden sm:block absolute top-10 -right-3 w-6 h-0.5 z-10"
-                  style={{ background: "#F97316" }}
+                  style={{ background: "#2563EB" }}
                 />
               )}
               <div className="flex items-center justify-between mb-4">
@@ -102,7 +102,7 @@ export function V2HowItWorks({ lang }: { lang: "en" | "es" }) {
                   style={{
                     fontSize: "3rem",
                     lineHeight: 1,
-                    background: "linear-gradient(135deg, #F97316 0%, #FB923C 100%)",
+                    background: "linear-gradient(135deg, #2563EB 0%, #3B82F6 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -112,9 +112,9 @@ export function V2HowItWorks({ lang }: { lang: "en" | "es" }) {
                 <span
                   className="rounded-full px-3 py-1 text-[11px] font-bold"
                   style={{
-                    background: "rgba(249,115,22,0.15)",
-                    color: "#F97316",
-                    border: "1px solid rgba(249,115,22,0.3)",
+                    background: "rgba(37,99,235,0.15)",
+                    color: "#2563EB",
+                    border: "1px solid rgba(37,99,235,0.3)",
                   }}
                 >
                   {step.time}
@@ -139,13 +139,13 @@ export function V2HowItWorks({ lang }: { lang: "en" | "es" }) {
         <div
           className="rounded-2xl p-7 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left"
           style={{
-            background: "rgba(249,115,22,0.1)",
-            border: "1px solid rgba(249,115,22,0.25)",
+            background: "rgba(37,99,235,0.1)",
+            border: "1px solid rgba(37,99,235,0.25)",
           }}
         >
           <div
             className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-2xl mx-auto sm:mx-0"
-            style={{ background: "rgba(249,115,22,0.2)" }}
+            style={{ background: "rgba(37,99,235,0.2)" }}
           >
             📊
           </div>

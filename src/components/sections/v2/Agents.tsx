@@ -14,7 +14,7 @@ const EN = {
     name: "Bella",
     role: "AI Phone & Text Agent",
     tagline: "Answers every call in 2 rings. Books the job. Sends confirmation.",
-    color: "#F97316",
+    color: "#2563EB",
     features: [
       "100% of calls answered 24/7 — nights, weekends, holidays",
       "Books directly into your Google Calendar or scheduling app",
@@ -28,7 +28,7 @@ const EN = {
     name: "Leo",
     role: "AI Lead Follow-Up Agent",
     tagline: "Texts every new lead in 60 seconds. Follows up 14 days.",
-    color: "#0F2044",
+    color: "#1E3A5F",
     features: [
       "Texts every missed call within 60 seconds automatically",
       "Follows up at 1, 3, 7, and 14 days — most competitors stop at 1",
@@ -52,7 +52,7 @@ const ES = {
     name: "Bella",
     role: "Agente de Llamadas y Texto con IA",
     tagline: "Contesta cada llamada en 2 timbres. Agenda el trabajo. Manda confirmación.",
-    color: "#F97316",
+    color: "#2563EB",
     features: [
       "100% de llamadas contestadas 24/7 — noches, fines de semana, días festivos",
       "Agenda directamente en tu Google Calendar o app de citas",
@@ -66,7 +66,7 @@ const ES = {
     name: "Leo",
     role: "Agente de Seguimiento de Leads con IA",
     tagline: "Manda texto a cada lead en 60 segundos. Sigue por 14 días.",
-    color: "#0F2044",
+    color: "#1E3A5F",
     features: [
       "Manda texto a cada llamada perdida en 60 segundos automáticamente",
       "Sigue al día 1, 3, 7 y 14 — la mayoría se rinde al primer intento",
@@ -97,9 +97,9 @@ export function V2Agents({ lang }: { lang: "en" | "es" }) {
           <span
             className="inline-block rounded-full px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.15em] mb-4"
             style={{
-              background: "rgba(249,115,22,0.1)",
-              color: "#F97316",
-              border: "1px solid rgba(249,115,22,0.25)",
+              background: "rgba(37,99,235,0.1)",
+              color: "#2563EB",
+              border: "1px solid rgba(37,99,235,0.25)",
             }}
           >
             {t.eyebrow}
@@ -108,7 +108,7 @@ export function V2Agents({ lang }: { lang: "en" | "es" }) {
             className="font-black tracking-tight text-balance"
             style={{
               fontSize: "clamp(1.9rem, 4vw, 2.8rem)",
-              color: "#0F2044",
+              color: "#1E3A5F",
               lineHeight: 1.1,
             }}
           >
@@ -230,10 +230,10 @@ export function V2Agents({ lang }: { lang: "en" | "es" }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl font-bold text-white transition-all hover:opacity-90"
             style={{
-              background: "#F97316",
+              background: "#2563EB",
               padding: "16px 36px",
               fontSize: "1rem",
-              boxShadow: "0 8px 24px rgba(249,115,22,0.35)",
+              boxShadow: "0 8px 24px rgba(37,99,235,0.4)",
             }}
           >
             {t.ctaLabel}

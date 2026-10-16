@@ -23,7 +23,7 @@ export function V2Cta({ lang }: { lang: "en" | "es" }) {
   const t = lang === "es" ? ES : EN;
 
   return (
-    <section style={{ background: "#0F2044" }} className="py-20 sm:py-28">
+    <section style={{ background: "#0F1F35" }} className="py-20 sm:py-28">
       <div className="mx-auto w-full max-w-3xl px-6 lg:px-8 text-center">
         <h2
           className="font-black text-white text-balance"
@@ -44,10 +44,10 @@ export function V2Cta({ lang }: { lang: "en" | "es" }) {
           rel="noopener noreferrer"
           className="mt-8 inline-flex items-center gap-2 rounded-xl font-bold text-white transition-all hover:opacity-90"
           style={{
-            background: "#F97316",
+            background: "#2563EB",
             padding: "17px 40px",
             fontSize: "1.05rem",
-            boxShadow: "0 12px 32px rgba(249,115,22,0.45)",
+            boxShadow: "0 12px 32px rgba(37,99,235,0.45)",
           }}
         >
           {t.cta}
