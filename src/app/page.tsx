@@ -25,8 +25,8 @@ export default function HomePage() {
             onClick={() => setLang(l)}
             className="px-4 py-2 text-[12px] font-black uppercase tracking-widest transition-all"
             style={{
-              background: lang === l ? "#2563EB" : "#0F1F35",
-              color: lang === l ? "#fff" : "rgba(255,255,255,0.5)",
+              background: lang === l ? "#22C55E" : "#111111",
+              color: lang === l ? "#000" : "rgba(255,255,255,0.5)",
             }}
           >
             {l}
