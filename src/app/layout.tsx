@@ -104,7 +104,7 @@ export default function RootLayout({
       lang={initialLocale}
       className={`${inter.variable} ${jakarta.variable}`}
     >
-      <body className="min-h-screen bg-bg font-sans text-ink-primary antialiased">
+      <body className="min-h-screen font-sans antialiased" style={{ background: "#000000", color: "#ffffff" }}>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
