@@ -9,7 +9,7 @@
 <x-dc>
 <helmet>
 <title>AI Minds — Your team, multiplied</title>
-<meta name="description" content="Bella answers every call 24/7 for HVAC &amp; plumbing companies in Dallas, TX. English &amp; Spanish.">
+<meta name="description" content="Nova answers every call 24/7 for HVAC &amp; plumbing companies in Dallas, TX. English &amp; Spanish.">
 <meta property="og:title" content="AI Minds — Your team, multiplied">
 <meta property="og:description" content="2 AI coworkers that handle busywork for small businesses.">
 <meta property="og:image" content="assets/og-image.png">
@@ -165,7 +165,7 @@ a:hover{color:var(--accent)}
           <span style="font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--accent)">$1,550</span>
         </div>
         <div style="padding:20px 22px;display:flex;flex-direction:column;gap:6px;background:var(--surface)">
-          <span style="font-size:12px;color:var(--muted)">{{ t.withBellaLabel }}</span>
+          <span style="font-size:12px;color:var(--muted)">{{ t.withNovaLabel }}</span>
           <span style="font-size:30px;font-weight:700;letter-spacing:-.02em">$0</span>
         </div>
       </div>
@@ -183,9 +183,9 @@ a:hover{color:var(--accent)}
     <article style="background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:clamp(28px,3.5vw,40px);display:flex;flex-direction:column;gap:24px;box-shadow:var(--shadow)">
       <div style="display:flex;align-items:center;gap:14px">
         <div aria-hidden="true" style="position:relative;width:52px;height:52px;flex:none;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
-        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Bella</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.bellaRole }}</p></div>
+        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Nova</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.novaRole }}</p></div>
       </div>
-      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">{{ t.bellaTagline }}</p>
+      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">{{ t.novaTagline }}</p>
       <ul aria-label="Channels" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px">
         <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">WhatsApp</li>
         <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">SMS</li>
@@ -193,16 +193,16 @@ a:hover{color:var(--accent)}
         <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">iMessage</li>
       </ul>
       <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.45">
-        <sc-for list="{{ t.bellaFeatures }}" as="bf" hint-placeholder-count="5">
+        <sc-for list="{{ t.novaFeatures }}" as="bf" hint-placeholder-count="5">
           <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>{{ bf }}</li>
         </sc-for>
       </ul>
-      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">{{ t.bellaResultBold }}</strong> {{ t.bellaResultRest }}</p>
+      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">{{ t.novaResultBold }}</strong> {{ t.novaResultRest }}</p>
     </article>
     <article style="background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:clamp(28px,3.5vw,40px);display:flex;flex-direction:column;gap:24px;box-shadow:var(--shadow)">
       <div style="display:flex;align-items:center;gap:14px">
         <div aria-hidden="true" style="position:relative;width:52px;height:52px;flex:none;transform:rotate(140deg);border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
-        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Leo</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.leoRole }}</p></div>
+        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Marco</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.leoRole }}</p></div>
       </div>
       <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">{{ t.leoTagline }}</p>
       <ul aria-label="Channels" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px">
@@ -296,7 +296,7 @@ a:hover{color:var(--accent)}
   </div>
   <div style="width:100%;max-width:960px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px">
     <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$400</span><span style="font-size:14px;color:var(--muted)">{{ t.statJob }}</span></div>
-    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$199</span><span style="font-size:14px;color:var(--muted)">{{ t.statBella }}</span></div>
+    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$199</span><span style="font-size:14px;color:var(--muted)">{{ t.statNova }}</span></div>
     <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700;color:var(--accent)">10×</span><span style="font-size:14px;color:var(--muted)">{{ t.statRoi }}</span></div>
     <div style="border:1px solid var(--ink);border-radius:20px;padding:22px;display:flex;align-items:center;gap:14px;background:var(--surface)">
       <span aria-hidden="true" style="width:44px;height:44px;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:13px;flex:none">30</span>
@@ -375,7 +375,7 @@ const COPY = {
     navAgents: 'Agents', navHow: 'How it works', navPricing: 'Pricing', headerCta: 'Book free audit',
     tag: 'For HVAC & Plumbing Companies · Dallas, TX',
     headline: 'Never Miss Another Service Call.',
-    subhead: 'Bella answers every call 24/7 — books the job, texts a confirmation, and works in English or Spanish. Your customers reach you on WhatsApp, text, or call.',
+    subhead: 'Nova answers every call 24/7 — books the job, texts a confirmation, and works in English or Spanish. Your customers reach you on WhatsApp, text, or call.',
     ctaPrimary: 'Book a Free 15-Min Audit', ctaSecondary: 'See How It Works',
     chips: ['Answers in 2 rings', 'English & Spanish', 'Live in 5 days', 'Cancel anytime'],
     problemLabel: 'The cost of a missed call',
@@ -383,19 +383,19 @@ const COPY = {
     stat2title: 'never call back', stat2desc: 'they call your competitor instead',
     stat3title: 'lost every month', stat3desc: 'at $400/job avg × 5 missed calls/day',
     ledgerTitle: "Tonight's missed calls", ledgerSub: 'after 6:00 PM',
-    lostLabel: 'Lost tonight', withBellaLabel: 'With Bella',
+    lostLabel: 'Lost tonight', withNovaLabel: 'With Nova',
     agentsLabel: 'Meet the agents', agentsTitle: 'Your team, multiplied.',
     agentsSub: "2 AI coworkers that handle busywork for small businesses. We don't replace employees, we multiply them.",
-    bellaRole: 'AI Phone & Text Agent',
-    bellaTagline: 'Answers every call in 2 rings. Books the job. Sends confirmation.',
-    bellaFeatures: [
+    novaRole: 'AI Phone & Text Agent',
+    novaTagline: 'Answers every call in 2 rings. Books the job. Sends confirmation.',
+    novaFeatures: [
       '100% of calls answered 24/7, nights, weekends, holidays',
       'Books directly into Google Calendar or your scheduling app',
       'English & Spanish, natural voice, not robotic',
       'Texts a confirmation the moment the job is booked',
       "Transfers to you when it's a real emergency"
     ],
-    bellaResultBold: '12+ jobs recovered', bellaResultRest: 'per month from after-hours calls alone.',
+    novaResultBold: '12+ jobs recovered', novaResultRest: 'per month from after-hours calls alone.',
     leoRole: 'AI Lead Follow-Up Agent',
     leoTagline: 'Texts every new lead in 60 seconds. Follows up 14 days.',
     leoFeatures: [
@@ -408,14 +408,14 @@ const COPY = {
     leoResultBold: '67% of leads', leoResultRest: "who don't answer calls will respond to a text.",
     howLabel: 'How it works', howTitle: 'Live in 5 days.',
     step1when: 'Today', step1title: 'Book a free 15-min audit', step1desc: "We show you exactly how many calls you're losing and what it's costing you.",
-    step2when: 'Days 1–5', step2title: 'We build Bella & Leo', step2desc: 'Trained on your services, prices & schedule. You approve before anything goes live.',
+    step2when: 'Days 1–5', step2title: 'We build Nova & Marco', step2desc: 'Trained on your services, prices & schedule. You approve before anything goes live.',
     step3when: 'Day 5', step3title: 'Go live', step3desc: 'Every call answered, every lead followed up, and a morning summary text every day.',
     dashMeta: 'Morning summary · Tue 7:00 AM',
     dashCalls: 'Calls answered', dashJobs: 'Jobs booked', dashLeads: 'Leads texted',
     pricingLabel: 'Pricing', pricingTitle: 'One flat price. No surprises.',
     setupLabel: 'one-time setup', afterLabel: 'after 30 days',
     pricingCta: 'Start with a Free Audit', cancelNote: 'Cancel anytime. No contract.',
-    statJob: 'per job', statBella: 'Bella/mo', statRoi: 'typical ROI',
+    statJob: 'per job', statNova: 'Nova/mo', statRoi: 'typical ROI',
     guarantee: '30-Day Money-Back Guarantee',
     faqLabel: 'FAQ', faqTitle: 'Questions',
     ctaTitle: 'Book your free 15-min audit.',
@@ -430,7 +430,7 @@ const COPY = {
     navAgents: 'Agentes', navHow: 'Cómo funciona', navPricing: 'Precios', headerCta: 'Auditoría gratis',
     tag: 'Para empresas de HVAC y plomería · Dallas, TX',
     headline: 'Nunca pierdas otra llamada de servicio.',
-    subhead: 'Bella contesta cada llamada 24/7 — agenda el trabajo, envía una confirmación por texto y habla inglés o español. Tus clientes te contactan por WhatsApp, texto o llamada.',
+    subhead: 'Nova contesta cada llamada 24/7 — agenda el trabajo, envía una confirmación por texto y habla inglés o español. Tus clientes te contactan por WhatsApp, texto o llamada.',
     ctaPrimary: 'Agenda una auditoría gratis de 15 min', ctaSecondary: 'Mira cómo funciona',
     chips: ['Contesta en 2 timbres', 'Inglés y español', 'En vivo en 5 días', 'Cancela cuando quieras'],
     problemLabel: 'El costo de una llamada perdida',
@@ -438,19 +438,19 @@ const COPY = {
     stat2title: 'nunca vuelven a llamar', stat2desc: 'llaman a tu competencia en su lugar',
     stat3title: 'perdidos cada mes', stat3desc: 'a $400/trabajo × 5 llamadas perdidas/día',
     ledgerTitle: 'Llamadas perdidas esta noche', ledgerSub: 'después de las 6:00 PM',
-    lostLabel: 'Perdido esta noche', withBellaLabel: 'Con Bella',
+    lostLabel: 'Perdido esta noche', withNovaLabel: 'Con Nova',
     agentsLabel: 'Conoce a los agentes', agentsTitle: 'Tu equipo, multiplicado.',
     agentsSub: '2 compañeros de IA que se encargan del trabajo repetitivo. No reemplazamos empleados, los multiplicamos.',
-    bellaRole: 'Agente de llamadas y texto con IA',
-    bellaTagline: 'Contesta cada llamada en 2 timbres. Agenda el trabajo. Envía confirmación.',
-    bellaFeatures: [
+    novaRole: 'Agente de llamadas y texto con IA',
+    novaTagline: 'Contesta cada llamada en 2 timbres. Agenda el trabajo. Envía confirmación.',
+    novaFeatures: [
       '100% de las llamadas contestadas 24/7, noches, fines de semana y festivos',
       'Agenda directamente en Google Calendar o tu app de citas',
       'Inglés y español, voz natural, no robótica',
       'Envía una confirmación por texto en cuanto se agenda el trabajo',
       'Te transfiere cuando es una emergencia real'
     ],
-    bellaResultBold: '12+ trabajos recuperados', bellaResultRest: 'por mes solo de llamadas fuera de horario.',
+    novaResultBold: '12+ trabajos recuperados', novaResultRest: 'por mes solo de llamadas fuera de horario.',
     leoRole: 'Agente de seguimiento de leads con IA',
     leoTagline: 'Manda texto a cada lead en 60 segundos. Sigue por 14 días.',
     leoFeatures: [
@@ -463,14 +463,14 @@ const COPY = {
     leoResultBold: '67% de los leads', leoResultRest: 'que no contestan llamadas sí responden texto.',
     howLabel: 'Cómo funciona', howTitle: 'En vivo en 5 días.',
     step1when: 'Hoy', step1title: 'Agenda una auditoría gratis de 15 min', step1desc: 'Te mostramos exactamente cuántas llamadas estás perdiendo y cuánto te está costando.',
-    step2when: 'Días 1–5', step2title: 'Construimos a Bella y Leo', step2desc: 'Entrenados con tus servicios, precios y horario. Tú apruebas antes de salir en vivo.',
+    step2when: 'Días 1–5', step2title: 'Construimos a Nova y Marco', step2desc: 'Entrenados con tus servicios, precios y horario. Tú apruebas antes de salir en vivo.',
     step3when: 'Día 5', step3title: 'Salir en vivo', step3desc: 'Cada llamada contestada, cada lead con seguimiento y un resumen matutino por texto cada día.',
     dashMeta: 'Resumen matutino · Mar 7:00 AM',
     dashCalls: 'Llamadas contestadas', dashJobs: 'Trabajos agendados', dashLeads: 'Leads contactados',
     pricingLabel: 'Precios', pricingTitle: 'Un precio fijo. Sin sorpresas.',
     setupLabel: 'configuración única', afterLabel: 'después de 30 días',
     pricingCta: 'Empieza con una Auditoría Gratis', cancelNote: 'Cancela cuando quieras. Sin contrato.',
-    statJob: 'por trabajo', statBella: 'Bella/mes', statRoi: 'retorno típico',
+    statJob: 'por trabajo', statNova: 'Nova/mes', statRoi: 'retorno típico',
     guarantee: 'Garantía de devolución de 30 días',
     faqLabel: 'Preguntas', faqTitle: 'Respuestas',
     ctaTitle: 'Agenda tu auditoría gratis de 15 min.',
@@ -484,12 +484,12 @@ const COPY = {
 };
 const DEMOS = {
   call: {
-    label: { en: 'Call', es: 'Llamada' }, agent: 'Bella', initial: 'B',
+    label: { en: 'Call', es: 'Llamada' }, agent: 'Nova', initial: 'B',
     meta: { en: 'Inbound call · (214) 555-0142', es: 'Llamada entrante · (214) 555-0142' },
     status: { en: 'Live call', es: 'Llamada en vivo' }, clock: '9:47 PM',
     footer: { en: 'Answered in 2 rings', es: 'Contestada en 2 timbres' },
     msgs: [
-      ['a', "Thanks for calling Rivera Heating & Air, this is Bella. How can I help tonight?"],
+      ['a', "Thanks for calling Rivera Heating & Air, this is Nova. How can I help tonight?"],
       ['u', "My AC stopped cooling and it's 88 degrees inside."],
       ['a', "I'm sorry, let's get a tech out to you. What's the service address?"],
       ['u', '4120 Ross Ave, Dallas.'],
@@ -498,12 +498,12 @@ const DEMOS = {
       ['e', 'Job booked · Wed 8–10 AM · confirmation texted']
     ]},
   text: {
-    label: { en: 'Text', es: 'Texto' }, agent: 'Leo', initial: 'L',
+    label: { en: 'Text', es: 'Texto' }, agent: 'Marco', initial: 'L',
     meta: { en: 'SMS · missed call follow-up', es: 'SMS · seguimiento de llamada perdida' },
     status: { en: 'Texting', es: 'Enviando texto' }, clock: '6:12 PM',
     footer: { en: 'Sent 60 seconds after a missed call', es: 'Enviado 60 segundos después de una llamada perdida' },
     msgs: [
-      ['a', 'Hi, this is Leo with Rivera Heating & Air. Sorry we missed your call. What can we help with?'],
+      ['a', 'Hi, this is Marco with Rivera Heating & Air. Sorry we missed your call. What can we help with?'],
       ['u', 'Water heater is leaking in the garage.'],
       ['a', 'Got it. Is it a tank or tankless unit, and is the water shut off?'],
       ['u', "Tank. Yes it's off."],
@@ -512,13 +512,13 @@ const DEMOS = {
       ['e', 'Job booked · Thu 1–3 PM · added to calendar']
     ]},
   whatsapp: {
-    label: { en: 'WhatsApp', es: 'WhatsApp' }, agent: 'Bella', initial: 'B',
+    label: { en: 'WhatsApp', es: 'WhatsApp' }, agent: 'Nova', initial: 'B',
     meta: { en: 'WhatsApp · Español', es: 'WhatsApp · Español' },
     status: { en: 'Online', es: 'En línea' }, clock: '10:31 PM',
     footer: { en: 'English or Spanish, automatically', es: 'Inglés o español, automáticamente' },
     msgs: [
       ['u', 'Hola, mi calefacción no prende.'],
-      ['a', 'Hola, soy Bella de Rivera Heating & Air. Lo siento. ¿Me da la dirección del servicio?'],
+      ['a', 'Hola, soy Nova de Rivera Heating & Air. Lo siento. ¿Me da la dirección del servicio?'],
       ['u', '2210 Jefferson Blvd, Dallas.'],
       ['a', 'Tengo mañana de 9 a 11 AM. ¿Se lo agendo?'],
       ['u', 'Sí, por favor.'],
@@ -533,30 +533,30 @@ const LEDGER = [
   { time: '11:20 PM', job: { en: 'Clogged main line', es: 'Drenaje principal tapado' }, amount: '$350' }
 ];
 const BOOKINGS = [
-  { time: '8:00', job: { en: 'AC repair · 4120 Ross Ave', es: 'Reparación AC · 4120 Ross Ave' }, by: 'Bella' },
-  { time: '10:30', job: { en: 'Tune-up · Lakewood', es: 'Mantenimiento · Lakewood' }, by: 'Leo' },
-  { time: '1:00', job: { en: 'Water heater · Oak Cliff', es: 'Calentador · Oak Cliff' }, by: 'Leo' },
-  { time: '3:30', job: { en: 'No heat · Bishop Arts', es: 'Sin calefacción · Bishop Arts' }, by: 'Bella' }
+  { time: '8:00', job: { en: 'AC repair · 4120 Ross Ave', es: 'Reparación AC · 4120 Ross Ave' }, by: 'Nova' },
+  { time: '10:30', job: { en: 'Tune-up · Lakewood', es: 'Mantenimiento · Lakewood' }, by: 'Marco' },
+  { time: '1:00', job: { en: 'Water heater · Oak Cliff', es: 'Calentador · Oak Cliff' }, by: 'Marco' },
+  { time: '3:30', job: { en: 'No heat · Bishop Arts', es: 'Sin calefacción · Bishop Arts' }, by: 'Nova' }
 ];
 const INCLUDED = {
-  en: ['Bella & Leo fully built', 'Trained on your services, prices & schedule', 'English & Spanish, 24/7', 'WhatsApp, SMS, and phone call', 'Live in 3–5 business days', 'Morning summary text every day', 'You approve before anything goes live'],
-  es: ['Bella y Leo completamente construidos', 'Entrenados con tus servicios, precios y horario', 'Inglés y español, 24/7', 'WhatsApp, SMS y llamada telefónica', 'En vivo en 3–5 días hábiles', 'Resumen por texto cada mañana', 'Tú apruebas antes de salir en vivo']
+  en: ['Nova & Marco fully built', 'Trained on your services, prices & schedule', 'English & Spanish, 24/7', 'WhatsApp, SMS, and phone call', 'Live in 3–5 business days', 'Morning summary text every day', 'You approve before anything goes live'],
+  es: ['Nova y Marco completamente construidos', 'Entrenados con tus servicios, precios y horario', 'Inglés y español, 24/7', 'WhatsApp, SMS y llamada telefónica', 'En vivo en 3–5 días hábiles', 'Resumen por texto cada mañana', 'Tú apruebas antes de salir en vivo']
 };
 const FAQS = {
   en: [
-    ['Will my customers know it’s AI?', 'Bella speaks with a natural voice in English or Spanish, so most callers simply get their job booked. If a customer asks, Bella tells them she’s your AI assistant, and she transfers to you for real emergencies.'],
-    ['Does it work with WhatsApp?', 'Yes. Bella and Leo work over WhatsApp, SMS, and phone call, so customers reach you however they prefer.'],
-    ['What if I already have a receptionist?', 'We don’t replace employees, we multiply them. Bella covers nights, weekends, holidays, and overflow when your receptionist is already on a call.'],
+    ['Will my customers know it’s AI?', 'Nova speaks with a natural voice in English or Spanish, so most callers simply get their job booked. If a customer asks, Nova tells them she’s your AI assistant, and she transfers to you for real emergencies.'],
+    ['Does it work with WhatsApp?', 'Yes. Nova and Marco work over WhatsApp, SMS, and phone call, so customers reach you however they prefer.'],
+    ['What if I already have a receptionist?', 'We don’t replace employees, we multiply them. Nova covers nights, weekends, holidays, and overflow when your receptionist is already on a call.'],
     ['What if the AI makes a mistake?', 'You approve everything before it goes live, and you get a morning summary text every day showing each call and booking. Real emergencies are transferred straight to you.'],
-    ['Does it work with my scheduling software?', 'Bella books directly into Google Calendar or your scheduling app. We set up the connection during your 3–5 day build.'],
+    ['Does it work with my scheduling software?', 'Nova books directly into Google Calendar or your scheduling app. We set up the connection during your 3–5 day build.'],
     ['How fast can I cancel?', 'Anytime. There’s no contract, and you’re covered by our 30-Day Money-Back Guarantee.']
   ],
   es: [
-    ['¿Mis clientes van a saber que es IA?', 'Bella habla con voz natural en inglés o español, así que la mayoría solo agenda su trabajo. Si un cliente pregunta, Bella le dice que es tu asistente de IA y te transfiere en emergencias reales.'],
-    ['¿Funciona con WhatsApp?', 'Sí. Bella y Leo funcionan por WhatsApp, SMS y llamada telefónica, para que tus clientes te contacten como prefieran.'],
-    ['¿Qué pasa si ya tengo una recepcionista?', 'No reemplazamos empleados, los multiplicamos. Bella cubre noches, fines de semana, festivos y desbordamiento cuando tu recepcionista ya está en una llamada.'],
+    ['¿Mis clientes van a saber que es IA?', 'Nova habla con voz natural en inglés o español, así que la mayoría solo agenda su trabajo. Si un cliente pregunta, Nova le dice que es tu asistente de IA y te transfiere en emergencias reales.'],
+    ['¿Funciona con WhatsApp?', 'Sí. Nova y Marco funcionan por WhatsApp, SMS y llamada telefónica, para que tus clientes te contacten como prefieran.'],
+    ['¿Qué pasa si ya tengo una recepcionista?', 'No reemplazamos empleados, los multiplicamos. Nova cubre noches, fines de semana, festivos y desbordamiento cuando tu recepcionista ya está en una llamada.'],
     ['¿Qué pasa si la IA comete un error?', 'Tú apruebas todo antes de salir en vivo, y recibes un resumen por texto cada mañana con cada llamada y reserva. Las emergencias reales se transfieren directamente a ti.'],
-    ['¿Funciona con mi software de citas?', 'Bella agenda directamente en Google Calendar o tu app de citas. Configuramos la conexión durante tu construcción de 3–5 días.'],
+    ['¿Funciona con mi software de citas?', 'Nova agenda directamente en Google Calendar o tu app de citas. Configuramos la conexión durante tu construcción de 3–5 días.'],
     ['¿Qué tan rápido puedo cancelar?', 'Cuando quieras. No hay contrato y estás cubierto por nuestra Garantía de devolución de 30 días.']
   ]
 };
