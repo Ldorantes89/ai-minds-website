@@ -8,17 +8,17 @@
 <body>
 <x-dc>
 <helmet>
-<title>AI Minds — Your team, multiplied</title>
-<meta name="description" content="Nova answers every call 24/7 for HVAC &amp; plumbing companies in Dallas, TX. English &amp; Spanish.">
-<meta property="og:title" content="AI Minds — Your team, multiplied">
-<meta property="og:description" content="2 AI coworkers that handle busywork for small businesses.">
+<title>AI Minds — AI Implementation for Small Business</title>
+<meta name="description" content="I find where your business is losing time and money, and fix it with AI — usually in under a week. Dallas, TX. English & Spanish.">
+<meta property="og:title" content="AI Minds — AI Implementation for Small Business">
+<meta property="og:description" content="Stop losing money to work you could automate. AI consulting for small and medium businesses.">
 <meta property="og:image" content="assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F4F2F0;--surface:#FFFFFF;--surface-2:#ECE9E4;--ink:#16171A;--muted:#575A5E;--border:#E1DDD7;--accent:#1E5A86;--orb:radial-gradient(circle at 30% 28%,#EDB993 0,rgba(237,185,147,0) 38%),radial-gradient(circle at 52% 12%,#A79A55 0,rgba(167,154,85,0) 40%),radial-gradient(circle at 72% 48%,#D3EBFB 0,rgba(211,235,251,0) 34%),radial-gradient(circle at 20% 74%,#CDB72E 0,rgba(205,183,46,0) 32%),radial-gradient(circle at 42% 92%,#2F5A3A 0,rgba(47,90,58,0) 40%),radial-gradient(circle at 82% 82%,#1B5E8E 0,rgba(27,94,142,0) 45%),linear-gradient(160deg,#B9A576 0%,#8FB9D6 50%,#2A6488 100%);--grain:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.85%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3CfeColorMatrix values=%220 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 -.35%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');--accent-ink:#FFFFFF;--shadow:0 1px 2px rgba(20,19,15,.04),0 12px 32px -12px rgba(20,19,15,.12);--sans:'Manrope',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;color-scheme:light}
+:root{--bg:#F5F4F1;--surface:#FFFFFF;--surface-2:#ECEAE5;--ink:#14130F;--muted:#5C5A55;--border:#E0DDD7;--accent:#1A5C8A;--orb:radial-gradient(circle at 30% 28%,#EDB993 0,rgba(237,185,147,0) 38%),radial-gradient(circle at 52% 12%,#A79A55 0,rgba(167,154,85,0) 40%),radial-gradient(circle at 72% 48%,#D3EBFB 0,rgba(211,235,251,0) 34%),radial-gradient(circle at 20% 74%,#CDB72E 0,rgba(205,183,46,0) 32%),radial-gradient(circle at 42% 92%,#2F5A3A 0,rgba(47,90,58,0) 40%),radial-gradient(circle at 82% 82%,#1B5E8E 0,rgba(27,94,142,0) 45%),linear-gradient(160deg,#B9A576 0%,#8FB9D6 50%,#2A6488 100%);--grain:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.85%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3CfeColorMatrix values=%220 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 -.35%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');--accent-ink:#FFFFFF;--shadow:0 1px 2px rgba(20,19,15,.04),0 12px 32px -12px rgba(20,19,15,.12);--sans:'Manrope',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;color-scheme:light}
 [data-theme="dark"]{--bg:#101214;--surface:#181B1E;--surface-2:#22262A;--ink:#F2F1EE;--muted:#A6ABB0;--border:#2C3135;--accent:#8CC4EE;--accent-ink:#14130F;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -12px rgba(0,0,0,.6);color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -34,14 +34,16 @@ a:hover{color:var(--accent)}
 
 <div style="background:var(--bg);color:var(--ink);font-family:var(--sans);min-height:100vh">
 
+<!-- NAV -->
 <header style="position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--border)">
   <div style="max-width:1200px;margin:0 auto;padding:8px 24px;display:flex;align-items:center;gap:24px">
     <a href="#top" aria-label="AI Minds home" style="display:flex;padding:16px 16px 16px 0;flex:none">
-      <sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}"><img src="assets/logo.png" alt="AI Minds — Tech Company" style="height:48px;width:auto;display:block"></sc-if><sc-if value="{{ isDark }}"><img src="assets/logo-white.png" alt="AI Minds — Tech Company" style="height:48px;width:auto;display:block"></sc-if>
+      <sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}"><img src="assets/logo.png" alt="AI Minds" style="height:48px;width:auto;display:block"></sc-if>
+      <sc-if value="{{ isDark }}"><img src="assets/logo-white.png" alt="AI Minds" style="height:48px;width:auto;display:block"></sc-if>
     </a>
     <sc-if value="{{ showNav }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Primary" style="display:flex;gap:4px;margin-left:8px">
-        <a href="#agents" style="padding:8px 14px;border-radius:999px;font-size:15px;font-weight:600" style-hover="background:var(--surface-2)">{{ t.navAgents }}</a>
+        <a href="#services" style="padding:8px 14px;border-radius:999px;font-size:15px;font-weight:600" style-hover="background:var(--surface-2)">{{ t.navServices }}</a>
         <a href="#how" style="padding:8px 14px;border-radius:999px;font-size:15px;font-weight:600" style-hover="background:var(--surface-2)">{{ t.navHow }}</a>
         <a href="#pricing" style="padding:8px 14px;border-radius:999px;font-size:15px;font-weight:600" style-hover="background:var(--surface-2)">{{ t.navPricing }}</a>
       </nav>
@@ -61,14 +63,15 @@ a:hover{color:var(--accent)}
 
 <main id="top">
 
+<!-- HERO -->
 <section aria-labelledby="hero-h" style="position:relative;overflow:clip;max-width:1200px;margin:0 auto;padding:clamp(48px,8vw,104px) 24px clamp(64px,9vw,120px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(40px,6vw,72px);align-items:center">
   <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:28px;min-width:0">
     <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px"><span style="width:8px;height:8px;background:var(--accent);flex:none"></span>{{ t.tag }}</p>
-    <h1 id="hero-h" lang="{{ lang }}" style="margin:0;font-size:clamp(44px,6.4vw,82px);line-height:1;letter-spacing:-.035em;font-weight:800;text-wrap:balance">{{ t.headline }}</h1>
+    <h1 id="hero-h" lang="{{ lang }}" style="margin:0;font-size:clamp(40px,5.8vw,76px);line-height:1.02;letter-spacing:-.035em;font-weight:800;text-wrap:balance">{{ t.headline }}</h1>
     <p style="margin:0;font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--muted);max-width:560px;text-wrap:pretty">{{ t.subhead }}</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px">
       <a href="https://cal.com/ai-minds" style="background:var(--accent);color:var(--accent-ink);padding:16px 26px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .15s" style-hover="color:var(--accent-ink);transform:translateY(-1px);filter:brightness(1.08)">{{ t.ctaPrimary }}</a>
-      <a href="#how" style="background:var(--surface);color:var(--ink);border:1px solid var(--border);padding:15px 26px;border-radius:999px;font-weight:700;font-size:16px" style-hover="background:var(--surface-2);color:var(--ink)">{{ t.ctaSecondary }}</a>
+      <a href="#services" style="background:var(--surface);color:var(--ink);border:1px solid var(--border);padding:15px 26px;border-radius:999px;font-weight:700;font-size:16px" style-hover="background:var(--surface-2);color:var(--ink)">{{ t.ctaSecondary }}</a>
     </div>
     <ul aria-label="Highlights" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px">
       <sc-for list="{{ t.chips }}" as="chip" hint-placeholder-count="4">
@@ -81,7 +84,7 @@ a:hover{color:var(--accent)}
   <div aria-hidden="true" style="position:absolute;width:min(560px,110%);aspect-ratio:1;right:-14%;top:-18%;z-index:0;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
   <div style="position:relative;z-index:1;background:var(--surface);border:1px solid var(--border);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;min-width:0;font-family:var(--mono)">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border-bottom:1px solid var(--border);flex-wrap:wrap">
-      <div role="tablist" aria-label="Demo channel" style="display:flex;gap:4px;padding:4px;background:var(--surface-2);border-radius:999px">
+      <div role="tablist" aria-label="Demo type" style="display:flex;gap:4px;padding:4px;background:var(--surface-2);border-radius:999px">
         <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="3">
           <button role="tab" aria-selected="{{ tab.active }}" onClick="{{ tab.select }}" style="border:0;cursor:pointer;padding:8px 14px;border-radius:999px;font:inherit;font-size:13px;font-weight:500;background:{{ tab.bg }};color:{{ tab.fg }};box-shadow:{{ tab.shadow }}">{{ tab.label }}</button>
         </sc-for>
@@ -96,7 +99,7 @@ a:hover{color:var(--accent)}
       </div>
       <span style="margin-left:auto;font-size:12px;color:var(--muted)">{{ demo.clock }}</span>
     </div>
-    <div aria-live="polite" style="padding:20px 18px;display:flex;flex-direction:column;gap:10px;min-height:380px;background:var(--bg)">
+    <div aria-live="polite" style="padding:20px 18px;display:flex;flex-direction:column;gap:10px;min-height:340px;background:var(--bg)">
       <sc-for list="{{ msgs }}" as="m" hint-placeholder-count="4">
         <sc-if value="{{ m.agent }}">
           <div style="align-self:flex-start;max-width:84%;display:flex;flex-direction:column;gap:4px;animation:msgIn .35s ease both">
@@ -126,46 +129,46 @@ a:hover{color:var(--accent)}
   </div>
 </section>
 
+<!-- PAIN STATS -->
 <section aria-labelledby="problem-h" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface)">
   <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,112px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,64px);align-items:center">
     <div style="display:flex;flex-direction:column;gap:36px">
       <h2 id="problem-h" style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:500">{{ t.problemLabel }}</h2>
       <div style="display:flex;flex-direction:column">
         <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--border);align-items:baseline">
-          <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em">3–5</span>
+          <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em">3–4 hrs</span>
           <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">{{ t.stat1title }}</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">{{ t.stat1desc }}</p></div>
         </div>
         <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--border);align-items:baseline">
-          <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em">67%</span>
+          <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em">60%</span>
           <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">{{ t.stat2title }}</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">{{ t.stat2desc }}</p></div>
         </div>
         <div style="display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);align-items:baseline">
-          <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em;color:var(--accent)">$18K</span>
+          <span style="font-family:var(--mono);font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em;color:var(--accent)">$5K+</span>
           <div><p style="margin:0 0 4px;font-size:19px;font-weight:700">{{ t.stat3title }}</p><p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5">{{ t.stat3desc }}</p></div>
         </div>
       </div>
     </div>
     <div style="background:var(--bg);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);font-family:var(--mono);overflow:hidden">
       <div style="padding:18px 22px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px">
-        <span style="font-size:14px;font-weight:700">{{ t.ledgerTitle }}</span>
-        <span style="font-size:12px;color:var(--muted)">{{ t.ledgerSub }}</span>
+        <span style="font-size:14px;font-weight:700">{{ t.leakTitle }}</span>
+        <span style="font-size:12px;color:var(--muted)">{{ t.leakSub }}</span>
       </div>
       <ul style="list-style:none;margin:0;padding:6px 22px">
-        <sc-for list="{{ ledger }}" as="row" hint-placeholder-count="4">
-          <li style="display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:12px;padding:14px 0;border-bottom:1px dashed var(--border);font-size:13.5px;align-items:center">
-            <span style="color:var(--muted)">{{ row.time }}</span>
-            <span>{{ row.job }}</span>
-            <span style="font-weight:700">{{ row.amount }}</span>
+        <sc-for list="{{ leaks }}" as="row" hint-placeholder-count="4">
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:14px 0;border-bottom:1px dashed var(--border);font-size:13.5px;align-items:center">
+            <span>{{ row.task }}</span>
+            <span style="font-weight:700;color:var(--accent)">{{ row.cost }}</span>
           </li>
         </sc-for>
       </ul>
       <div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)">
         <div style="padding:20px 22px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:6px">
-          <span style="font-size:12px;color:var(--muted)">{{ t.lostLabel }}</span>
-          <span style="font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--accent)">$1,550</span>
+          <span style="font-size:12px;color:var(--muted)">{{ t.leakTotal }}</span>
+          <span style="font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--accent)">{{ t.leakTotalVal }}</span>
         </div>
         <div style="padding:20px 22px;display:flex;flex-direction:column;gap:6px;background:var(--surface)">
-          <span style="font-size:12px;color:var(--muted)">{{ t.withNovaLabel }}</span>
+          <span style="font-size:12px;color:var(--muted)">{{ t.withAiLabel }}</span>
           <span style="font-size:30px;font-weight:700;letter-spacing:-.02em">$0</span>
         </div>
       </div>
@@ -173,54 +176,31 @@ a:hover{color:var(--accent)}
   </div>
 </section>
 
-<section id="agents" aria-labelledby="agents-h" style="scroll-margin-top:90px;max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px">
-  <div style="display:flex;flex-direction:column;gap:16px;max-width:720px;margin-bottom:48px">
-    <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">{{ t.agentsLabel }}</p>
-    <h2 id="agents-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">{{ t.agentsTitle }}</h2>
-    <p style="margin:0;font-size:18px;line-height:1.55;color:var(--muted);text-wrap:pretty">{{ t.agentsSub }}</p>
+<!-- SERVICES -->
+<section id="services" aria-labelledby="services-h" style="scroll-margin-top:90px;max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px">
+  <div style="display:flex;flex-direction:column;gap:16px;max-width:720px;margin-bottom:56px">
+    <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">{{ t.servicesLabel }}</p>
+    <h2 id="services-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">{{ t.servicesTitle }}</h2>
+    <p style="margin:0;font-size:18px;line-height:1.55;color:var(--muted);text-wrap:pretty">{{ t.servicesSub }}</p>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
-    <article style="background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:clamp(28px,3.5vw,40px);display:flex;flex-direction:column;gap:24px;box-shadow:var(--shadow)">
-      <div style="display:flex;align-items:center;gap:14px">
-        <div aria-hidden="true" style="position:relative;width:52px;height:52px;flex:none;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
-        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Nova</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.novaRole }}</p></div>
-      </div>
-      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">{{ t.novaTagline }}</p>
-      <ul aria-label="Channels" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px">
-        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">WhatsApp</li>
-        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">SMS</li>
-        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">Phone Call</li>
-        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">iMessage</li>
-      </ul>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.45">
-        <sc-for list="{{ t.novaFeatures }}" as="bf" hint-placeholder-count="5">
-          <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>{{ bf }}</li>
-        </sc-for>
-      </ul>
-      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">{{ t.novaResultBold }}</strong> {{ t.novaResultRest }}</p>
-    </article>
-    <article style="background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:clamp(28px,3.5vw,40px);display:flex;flex-direction:column;gap:24px;box-shadow:var(--shadow)">
-      <div style="display:flex;align-items:center;gap:14px">
-        <div aria-hidden="true" style="position:relative;width:52px;height:52px;flex:none;transform:rotate(140deg);border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
-        <div><h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-.02em">Marco</h3><p style="margin:2px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.leoRole }}</p></div>
-      </div>
-      <p style="margin:0;font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.015em;text-wrap:balance">{{ t.leoTagline }}</p>
-      <ul aria-label="Channels" style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px">
-        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">WhatsApp</li>
-        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">SMS</li>
-        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">Phone Call</li>
-        <li style="font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--surface-2)">iMessage</li>
-      </ul>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.45">
-        <sc-for list="{{ t.leoFeatures }}" as="lf" hint-placeholder-count="5">
-          <li style="display:flex;gap:12px"><span style="width:7px;height:7px;background:var(--accent);flex:none;margin-top:8px"></span>{{ lf }}</li>
-        </sc-for>
-      </ul>
-      <p style="margin:auto 0 0;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:13.5px;line-height:1.5"><strong style="font-size:15px">{{ t.leoResultBold }}</strong> {{ t.leoResultRest }}</p>
-    </article>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px">
+    <sc-for list="{{ t.services }}" as="svc" hint-placeholder-count="5">
+      <article style="background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+          <span style="font-family:var(--mono);font-size:22px">{{ svc.icon }}</span>
+          <span style="font-family:var(--mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--border);color:var(--muted)">{{ svc.price }}</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-.015em">{{ svc.name }}</h3>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted)">{{ svc.desc }}</p>
+        </div>
+        <p style="margin:0;font-family:var(--mono);font-size:12.5px;padding-top:16px;border-top:1px solid var(--border);color:var(--ink)"><strong>{{ svc.result }}</strong></p>
+      </article>
+    </sc-for>
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section id="how" aria-labelledby="how-h" style="scroll-margin-top:90px;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
   <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,72px);align-items:start">
     <div style="display:flex;flex-direction:column;gap:40px">
@@ -245,66 +225,53 @@ a:hover{color:var(--accent)}
         </li>
       </ol>
     </div>
-    <div aria-label="Dashboard preview" role="img" style="background:var(--bg);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;font-family:var(--mono)">
-      <div style="display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--border)">
-        <span style="width:10px;height:10px;border-radius:50%;background:var(--border)"></span><span style="width:10px;height:10px;border-radius:50%;background:var(--border)"></span><span style="width:10px;height:10px;border-radius:50%;background:var(--border)"></span>
-        <span style="margin-left:10px;font-size:12px;color:var(--muted)">{{ t.dashMeta }}</span>
-      </div>
-      <div style="padding:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">{{ t.dashCalls }}</span><span style="font-size:26px;font-weight:700">14</span></div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">{{ t.dashJobs }}</span><span style="font-size:26px;font-weight:700;color:var(--accent)">6</span></div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;color:var(--muted)">{{ t.dashLeads }}</span><span style="font-size:26px;font-weight:700">9</span></div>
-      </div>
-      <ul style="list-style:none;margin:0;padding:0 20px 20px;display:flex;flex-direction:column;gap:8px">
-        <sc-for list="{{ bookings }}" as="b" hint-placeholder-count="4">
-          <li style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font-size:12.5px">
-            <span style="font-weight:700">{{ b.time }}</span>
-            <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ b.job }}</span>
-            <span style="padding:3px 8px;border-radius:999px;background:var(--surface-2);font-size:11px">{{ b.by }}</span>
-          </li>
+    <div aria-label="Industries" style="display:flex;flex-direction:column;gap:14px">
+      <p style="margin:0;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">{{ t.industriesLabel }}</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
+        <sc-for list="{{ t.industries }}" as="ind" hint-placeholder-count="8">
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:18px">{{ ind.icon }}</span>
+            <span style="font-size:14px;font-weight:700">{{ ind.name }}</span>
+            <span style="font-size:12px;color:var(--muted);line-height:1.4">{{ ind.hint }}</span>
+          </div>
         </sc-for>
-      </ul>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- PRICING -->
 <section id="pricing" aria-labelledby="pricing-h" style="scroll-margin-top:90px;max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px;display:flex;flex-direction:column;align-items:center;gap:48px">
   <div style="display:flex;flex-direction:column;gap:16px;text-align:center;align-items:center">
     <p style="margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">{{ t.pricingLabel }}</p>
     <h2 id="pricing-h" style="margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:800;text-wrap:balance">{{ t.pricingTitle }}</h2>
+    <p style="margin:0;font-size:18px;color:var(--muted);max-width:520px">{{ t.pricingSub }}</p>
   </div>
-  <div style="width:100%;max-width:560px;background:var(--surface);border:1px solid var(--border);border-radius:32px;box-shadow:var(--shadow);padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:28px">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-      <div style="background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px">
-        <span style="font-family:var(--mono);font-size:clamp(32px,4vw,40px);font-weight:700;letter-spacing:-.03em">$499</span>
-        <span style="font-size:14px;color:var(--muted)">{{ t.setupLabel }}</span>
+  <div style="width:100%;max-width:900px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;align-items:start">
+    <sc-for list="{{ t.plans }}" as="plan" hint-placeholder-count="3">
+      <div style="background:var(--surface);border:{{ plan.border }};border-radius:28px;padding:clamp(24px,3.5vw,36px);display:flex;flex-direction:column;gap:20px;box-shadow:var(--shadow);position:relative">
+        <sc-if value="{{ plan.badge }}">
+          <span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--accent-ink);font-family:var(--mono);font-size:11px;font-weight:700;padding:4px 14px;border-radius:999px;white-space:nowrap">{{ plan.badge }}</span>
+        </sc-if>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">{{ plan.tier }}</span>
+          <span style="font-family:var(--mono);font-size:clamp(32px,4vw,42px);font-weight:700;letter-spacing:-.03em">{{ plan.price }}</span>
+          <span style="font-size:14px;color:var(--muted)">{{ plan.cadence }}</span>
+        </div>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted)">{{ plan.desc }}</p>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.4">
+          <sc-for list="{{ plan.includes }}" as="inc" hint-placeholder-count="4">
+            <li style="display:flex;gap:10px;align-items:flex-start"><span aria-hidden="true" style="width:18px;height:18px;border-radius:999px;background:color-mix(in srgb,var(--accent) 16%,var(--surface));color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex:none;margin-top:1px">✓</span>{{ inc }}</li>
+          </sc-for>
+        </ul>
+        <a href="https://cal.com/ai-minds" style="background:{{ plan.ctaBg }};color:{{ plan.ctaFg }};border:{{ plan.ctaBorder }};padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;text-align:center;display:block" style-hover="filter:brightness(1.08)">{{ plan.cta }}</a>
       </div>
-      <div style="background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px">
-        <span style="font-family:var(--mono);font-size:clamp(32px,4vw,40px);font-weight:700;letter-spacing:-.03em">$199<span style="font-size:16px;font-weight:500;color:var(--muted)">/month</span></span>
-        <span style="font-size:14px;color:var(--muted)">{{ t.afterLabel }}</span>
-      </div>
-    </div>
-    <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;font-size:16px;line-height:1.4">
-      <sc-for list="{{ included }}" as="inc" hint-placeholder-count="7">
-        <li style="display:flex;gap:12px;align-items:flex-start"><span aria-hidden="true" style="width:20px;height:20px;border-radius:999px;background:color-mix(in srgb,var(--accent) 16%,var(--surface));color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex:none;margin-top:1px">✓</span>{{ inc }}</li>
-      </sc-for>
-    </ul>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:stretch">
-      <a href="https://cal.com/ai-minds" style="background:var(--accent);color:var(--accent-ink);padding:16px 26px;border-radius:999px;font-weight:700;font-size:16px;text-align:center" style-hover="color:var(--accent-ink);filter:brightness(1.08)">{{ t.pricingCta }}</a>
-      <p style="margin:0;text-align:center;font-family:var(--mono);font-size:12.5px;color:var(--muted)">{{ t.cancelNote }}</p>
-    </div>
+    </sc-for>
   </div>
-  <div style="width:100%;max-width:960px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px">
-    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$400</span><span style="font-size:14px;color:var(--muted)">{{ t.statJob }}</span></div>
-    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700">$199</span><span style="font-size:14px;color:var(--muted)">{{ t.statNova }}</span></div>
-    <div style="border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--mono);font-size:28px;font-weight:700;color:var(--accent)">10×</span><span style="font-size:14px;color:var(--muted)">{{ t.statRoi }}</span></div>
-    <div style="border:1px solid var(--ink);border-radius:20px;padding:22px;display:flex;align-items:center;gap:14px;background:var(--surface)">
-      <span aria-hidden="true" style="width:44px;height:44px;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:13px;flex:none">30</span>
-      <span style="font-weight:800;font-size:15px;line-height:1.3">{{ t.guarantee }}</span>
-    </div>
-  </div>
+  <p style="margin:0;font-family:var(--mono);font-size:13px;color:var(--muted)">{{ t.cancelNote }}</p>
 </section>
 
+<!-- FAQ -->
 <section id="faq" aria-labelledby="faq-h" style="scroll-margin-top:90px;border-top:1px solid var(--border)">
   <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,128px) 24px;display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px);align-items:flex-start">
     <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:16px">
@@ -329,6 +296,7 @@ a:hover{color:var(--accent)}
   </div>
 </section>
 
+<!-- CTA -->
 <section aria-labelledby="cta-h" style="padding:0 24px clamp(72px,10vw,120px)">
   <div style="position:relative;overflow:hidden;max-width:1200px;margin:0 auto;background:var(--ink);color:var(--bg);border-radius:36px;padding:clamp(48px,7vw,96px) clamp(28px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px;align-items:end">
     <div aria-hidden="true" style="position:absolute;width:420px;aspect-ratio:1;right:-120px;top:-180px;z-index:0;border-radius:50%;background:var(--orb);overflow:hidden"><div style="position:absolute;inset:0;background-image:var(--grain);opacity:.55;mix-blend-mode:overlay"></div></div>
@@ -348,15 +316,18 @@ a:hover{color:var(--accent)}
 <footer style="border-top:1px solid var(--border);background:var(--surface)">
   <div style="max-width:1200px;margin:0 auto;padding:56px 24px 32px;display:flex;flex-wrap:wrap;gap:40px 56px">
     <div style="flex:2 1 300px;display:flex;flex-direction:column;gap:16px;min-width:0">
-      <a href="#top" aria-label="AI Minds home" style="display:flex;padding:16px 16px 16px 0;align-self:flex-start"><sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}"><img src="assets/logo.png" alt="AI Minds — Tech Company" style="height:40px;width:auto;display:block"></sc-if><sc-if value="{{ isDark }}"><img src="assets/logo-white.png" alt="AI Minds — Tech Company" style="height:40px;width:auto;display:block"></sc-if></a>
+      <a href="#top" aria-label="AI Minds home" style="display:flex;padding:16px 16px 16px 0;align-self:flex-start">
+        <sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}"><img src="assets/logo.png" alt="AI Minds" style="height:40px;width:auto;display:block"></sc-if>
+        <sc-if value="{{ isDark }}"><img src="assets/logo-white.png" alt="AI Minds" style="height:40px;width:auto;display:block"></sc-if>
+      </a>
       <p style="margin:0;color:var(--muted);font-size:15px;line-height:1.5;max-width:340px">{{ t.footerTagline }}</p>
     </div>
-    <nav aria-label="Product" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
-      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">{{ t.footerProduct }}</span>
-      <a href="#agents">{{ t.navAgents }}</a><a href="#how">{{ t.navHow }}</a><a href="#pricing">{{ t.navPricing }}</a><a href="#faq">{{ t.faqLabel }}</a>
+    <nav aria-label="Services" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
+      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">{{ t.navServices }}</span>
+      <a href="#services">{{ t.navServices }}</a><a href="#how">{{ t.navHow }}</a><a href="#pricing">{{ t.navPricing }}</a><a href="#faq">{{ t.faqLabel }}</a>
     </nav>
-    <nav aria-label="Company" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
-      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">{{ t.footerCompany }}</span>
+    <nav aria-label="Contact" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
+      <span style="font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">{{ t.footerContact }}</span>
       <a href="mailto:luis@ai-minds.ai">luis@ai-minds.ai</a><a href="tel:+12148100799">(214) 810-0799</a><span style="color:var(--muted)">Dallas, TX</span>
     </nav>
     <nav aria-label="Get started" style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px;font-size:15px">
@@ -369,205 +340,315 @@ a:hover{color:var(--accent)}
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Deep sky&quot;,&quot;Moss&quot;,&quot;Clay&quot;],&quot;default&quot;:&quot;Deep sky&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;demoAutoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;demoAutoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
 const COPY = {
   en: {
-    navAgents: 'Agents', navHow: 'How it works', navPricing: 'Pricing', headerCta: 'Book free audit',
-    tag: 'For HVAC & Plumbing Companies · Dallas, TX',
-    headline: 'Never Miss Another Service Call.',
-    subhead: 'Nova answers every call 24/7 — books the job, texts a confirmation, and works in English or Spanish. Your customers reach you on WhatsApp, text, or call.',
-    ctaPrimary: 'Book a Free 15-Min Audit', ctaSecondary: 'See How It Works',
-    chips: ['Answers in 2 rings', 'English & Spanish', 'Live in 5 days', 'Cancel anytime'],
-    problemLabel: 'The cost of a missed call',
-    stat1title: 'missed calls/day', stat1desc: 'average for a 5-person HVAC company',
-    stat2title: 'never call back', stat2desc: 'they call your competitor instead',
-    stat3title: 'lost every month', stat3desc: 'at $400/job avg × 5 missed calls/day',
-    ledgerTitle: "Tonight's missed calls", ledgerSub: 'after 6:00 PM',
-    lostLabel: 'Lost tonight', withNovaLabel: 'With Nova',
-    agentsLabel: 'Meet the agents', agentsTitle: 'Your team, multiplied.',
-    agentsSub: "2 AI coworkers that handle busywork for small businesses. We don't replace employees, we multiply them.",
-    novaRole: 'AI Phone & Text Agent',
-    novaTagline: 'Answers every call in 2 rings. Books the job. Sends confirmation.',
-    novaFeatures: [
-      '100% of calls answered 24/7, nights, weekends, holidays',
-      'Books directly into Google Calendar or your scheduling app',
-      'English & Spanish, natural voice, not robotic',
-      'Texts a confirmation the moment the job is booked',
-      "Transfers to you when it's a real emergency"
+    navServices: 'Services', navHow: 'How it works', navPricing: 'Pricing',
+    headerCta: 'Free 20-min call',
+    tag: 'AI Consulting for Small & Medium Business · Dallas, TX',
+    headline: 'Stop losing money to work you could automate.',
+    subhead: 'I find where your business is leaking time and money, and fix it with AI — usually in under a week. English & Spanish.',
+    ctaPrimary: 'Book a Free 20-Min Call', ctaSecondary: 'See What I Do',
+    chips: ['Save 10+ hrs/week', 'Live in 3–5 days', 'English & Spanish', 'No tech knowledge needed'],
+    problemLabel: 'Where your business leaks money every week',
+    stat1title: 'spent on repetitive tasks', stat1desc: 'per day for the average owner of a 5–10 person business',
+    stat2title: 'of leads never get followed up', stat2desc: 'because there\'s no system — they just fall through',
+    stat3title: 'lost per month', stat3desc: 'to missed calls, unbooked leads, and manual work that could be automated',
+    leakTitle: 'Weekly time leaks', leakSub: 'before AI',
+    leakTotal: 'Hours lost/week', leakTotalVal: '15–20 hrs',
+    withAiLabel: 'After AI setup',
+    servicesLabel: 'What I do', servicesTitle: 'Five things businesses pay me to fix.',
+    servicesSub: 'Each one saves you time, makes you money, or both. Most take less than a week to go live.',
+    services: [
+      {
+        icon: '🤖',
+        name: 'AI Customer Service Bot',
+        price: '$1,500–$3,000',
+        desc: 'A chatbot on your website trained on your services, prices, and FAQs — answers customers 24/7 so you stop getting the same questions all day.',
+        result: 'Save 2–3 hrs/day on repetitive questions'
+      },
+      {
+        icon: '📞',
+        name: 'AI Phone Agent',
+        price: '$2,000–$4,000',
+        desc: 'A phone number that answers calls automatically, books appointments, and captures leads after hours. Never miss another call.',
+        result: 'Recover 10–15 jobs/month from missed calls'
+      },
+      {
+        icon: '💬',
+        name: 'Lead Follow-Up Automation',
+        price: '$1,000–$2,500',
+        desc: 'When someone contacts you and doesn\'t book, they automatically get a text/email sequence that follows up for 14 days. Set it once.',
+        result: '67% of leads respond to text vs. voicemail'
+      },
+      {
+        icon: '🧠',
+        name: 'Internal AI Assistant',
+        price: '$1,500–$3,000',
+        desc: 'Your team asks questions and gets instant answers — trained on your SOPs, pricing, and scripts. Stop being the answer to every question.',
+        result: 'Free 1–2 hrs/day of owner time'
+      },
+      {
+        icon: '🗺️',
+        name: 'AI Audit & Roadmap',
+        price: '$500 flat',
+        desc: 'A 1-hour call + a custom document showing exactly where AI could save you time and money, ranked by impact. No implementation — just the plan.',
+        result: 'Know your highest-ROI first move'
+      }
     ],
-    novaResultBold: '12+ jobs recovered', novaResultRest: 'per month from after-hours calls alone.',
-    leoRole: 'AI Lead Follow-Up Agent',
-    leoTagline: 'Texts every new lead in 60 seconds. Follows up 14 days.',
-    leoFeatures: [
-      'Texts every missed call within 60 seconds',
-      'Follows up at day 1, 3, 7, and 14',
-      'Qualifies the job and books the appointment',
-      'Re-engages cold leads with seasonal promos',
-      'Works over WhatsApp or SMS'
+    howLabel: 'How it works', howTitle: 'From call to live in 5 days.',
+    step1when: 'Day 0', step1title: 'Free 20-min call', step1desc: 'You tell me where your biggest time and money drains are. I tell you which one AI can fix first. No pitch.',
+    step2when: 'Days 1–4', step2title: 'I build it', step2desc: 'I configure, train, and test the AI on your specific business — your services, voice, and rules. You review before anything goes live.',
+    step3when: 'Day 5', step3title: 'Go live', step3desc: 'Your AI starts working. I stay on for 30 days to fix anything that comes up.',
+    industriesLabel: 'Industries I work with',
+    industries: [
+      { icon: '🔧', name: 'HVAC & Plumbing', hint: 'After-hours calls, lead follow-up' },
+      { icon: '🍽️', name: 'Restaurants', hint: 'Reservations, FAQs, catering leads' },
+      { icon: '💆', name: 'Med Spas & Salons', hint: 'Bookings, promotions, follow-up' },
+      { icon: '🏠', name: 'Real Estate', hint: 'Lead qualification, follow-up' },
+      { icon: '⚖️', name: 'Law Offices', hint: 'Intake, scheduling, FAQs' },
+      { icon: '💪', name: 'Fitness & Wellness', hint: 'Memberships, class bookings' },
+      { icon: '🏗️', name: 'Contractors', hint: 'Quote requests, missed calls' },
+      { icon: '🛒', name: 'E-commerce', hint: 'Customer support, order status' }
     ],
-    leoResultBold: '67% of leads', leoResultRest: "who don't answer calls will respond to a text.",
-    howLabel: 'How it works', howTitle: 'Live in 5 days.',
-    step1when: 'Today', step1title: 'Book a free 15-min audit', step1desc: "We show you exactly how many calls you're losing and what it's costing you.",
-    step2when: 'Days 1–5', step2title: 'We build Nova & Marco', step2desc: 'Trained on your services, prices & schedule. You approve before anything goes live.',
-    step3when: 'Day 5', step3title: 'Go live', step3desc: 'Every call answered, every lead followed up, and a morning summary text every day.',
-    dashMeta: 'Morning summary · Tue 7:00 AM',
-    dashCalls: 'Calls answered', dashJobs: 'Jobs booked', dashLeads: 'Leads texted',
-    pricingLabel: 'Pricing', pricingTitle: 'One flat price. No surprises.',
-    setupLabel: 'one-time setup', afterLabel: 'after 30 days',
-    pricingCta: 'Start with a Free Audit', cancelNote: 'Cancel anytime. No contract.',
-    statJob: 'per job', statNova: 'Nova/mo', statRoi: 'typical ROI',
-    guarantee: '30-Day Money-Back Guarantee',
+    pricingLabel: 'Pricing', pricingTitle: 'Start small. Scale when you see it work.',
+    pricingSub: 'Pick the entry point that makes sense for your business.',
+    plans: [
+      {
+        tier: 'Starter',
+        price: '$500',
+        cadence: 'one-time',
+        badge: '',
+        border: '1px solid var(--border)',
+        desc: 'AI audit and roadmap. I find exactly where you\'re losing time and money and show you what to fix first.',
+        includes: ['1-hour discovery call', 'Custom AI opportunity report', 'Priority-ranked action plan', 'Tool recommendations'],
+        cta: 'Book the Audit',
+        ctaBg: 'var(--surface-2)', ctaFg: 'var(--ink)', ctaBorder: '1px solid var(--border)'
+      },
+      {
+        tier: 'Build',
+        price: '$1,500–$4,000',
+        cadence: 'one-time project',
+        badge: 'Most popular',
+        border: '2px solid var(--accent)',
+        desc: 'I build one AI solution for your business — chatbot, phone agent, lead follow-up, or internal assistant.',
+        includes: ['Full build & configuration', 'Trained on your business', 'English & Spanish', 'Live in 3–5 days', '30-day support included'],
+        cta: 'Start a Project',
+        ctaBg: 'var(--accent)', ctaFg: 'var(--accent-ink)', ctaBorder: '2px solid var(--accent)'
+      },
+      {
+        tier: 'Retainer',
+        price: '$500/mo',
+        cadence: 'ongoing',
+        badge: '',
+        border: '1px solid var(--border)',
+        desc: 'I monitor, improve, and expand your AI every month. Add new automations as your business grows.',
+        includes: ['Monthly optimization calls', 'New automations each month', 'Priority support', 'Cancel anytime'],
+        cta: 'Talk About Retainer',
+        ctaBg: 'var(--surface-2)', ctaFg: 'var(--ink)', ctaBorder: '1px solid var(--border)'
+      }
+    ],
+    cancelNote: 'No contracts. 30-day money-back guarantee on all projects.',
     faqLabel: 'FAQ', faqTitle: 'Questions',
-    ctaTitle: 'Book your free 15-min audit.',
-    ctaSub: "We show you exactly how many calls you're losing and what it's costing you. No pitch. No commitment. Just the numbers.",
-    ctaBtn: 'Book a Free 15-Min Audit', ctaPhone: 'or call (214) 810-0799',
-    footerTagline: '2 AI coworkers that handle busywork for small businesses. Your team, multiplied.',
-    footerProduct: 'Product', footerCompany: 'Company', footerGetStarted: 'Get started',
-    footerBook: 'Book free audit', footerLang: 'Español',
+    ctaTitle: 'Not sure where to start?',
+    ctaSub: 'Book a free 20-minute call. I\'ll show you exactly where your business is losing time and money — and what AI can fix first. No pitch.',
+    ctaBtn: 'Book a Free 20-Min Call', ctaPhone: 'or call (214) 810-0799',
+    footerTagline: 'AI implementation for small and medium businesses. English & Spanish. Dallas, TX.',
+    footerContact: 'Contact', footerGetStarted: 'Get started',
+    footerBook: 'Book free call', footerLang: 'Español',
     customer: 'Customer', replay: '↻ replay'
   },
   es: {
-    navAgents: 'Agentes', navHow: 'Cómo funciona', navPricing: 'Precios', headerCta: 'Auditoría gratis',
-    tag: 'Para empresas de HVAC y plomería · Dallas, TX',
-    headline: 'Nunca pierdas otra llamada de servicio.',
-    subhead: 'Nova contesta cada llamada 24/7 — agenda el trabajo, envía una confirmación por texto y habla inglés o español. Tus clientes te contactan por WhatsApp, texto o llamada.',
-    ctaPrimary: 'Agenda una auditoría gratis de 15 min', ctaSecondary: 'Mira cómo funciona',
-    chips: ['Contesta en 2 timbres', 'Inglés y español', 'En vivo en 5 días', 'Cancela cuando quieras'],
-    problemLabel: 'El costo de una llamada perdida',
-    stat1title: 'llamadas perdidas/día', stat1desc: 'promedio en empresa HVAC de 5 personas',
-    stat2title: 'nunca vuelven a llamar', stat2desc: 'llaman a tu competencia en su lugar',
-    stat3title: 'perdidos cada mes', stat3desc: 'a $400/trabajo × 5 llamadas perdidas/día',
-    ledgerTitle: 'Llamadas perdidas esta noche', ledgerSub: 'después de las 6:00 PM',
-    lostLabel: 'Perdido esta noche', withNovaLabel: 'Con Nova',
-    agentsLabel: 'Conoce a los agentes', agentsTitle: 'Tu equipo, multiplicado.',
-    agentsSub: '2 compañeros de IA que se encargan del trabajo repetitivo. No reemplazamos empleados, los multiplicamos.',
-    novaRole: 'Agente de llamadas y texto con IA',
-    novaTagline: 'Contesta cada llamada en 2 timbres. Agenda el trabajo. Envía confirmación.',
-    novaFeatures: [
-      '100% de las llamadas contestadas 24/7, noches, fines de semana y festivos',
-      'Agenda directamente en Google Calendar o tu app de citas',
-      'Inglés y español, voz natural, no robótica',
-      'Envía una confirmación por texto en cuanto se agenda el trabajo',
-      'Te transfiere cuando es una emergencia real'
+    navServices: 'Servicios', navHow: 'Cómo funciona', navPricing: 'Precios',
+    headerCta: 'Llamada gratis 20 min',
+    tag: 'Consultoría de IA para pequeñas y medianas empresas · Dallas, TX',
+    headline: 'Deja de perder dinero en trabajo que se puede automatizar.',
+    subhead: 'Encuentro dónde tu negocio está perdiendo tiempo y dinero, y lo soluciono con IA — generalmente en menos de una semana. Inglés y español.',
+    ctaPrimary: 'Agenda una llamada gratis de 20 min', ctaSecondary: 'Ver qué hago',
+    chips: ['Ahorra 10+ hrs/semana', 'En vivo en 3–5 días', 'Inglés y español', 'Sin conocimientos de tecnología'],
+    problemLabel: 'Dónde tu negocio pierde dinero cada semana',
+    stat1title: 'en tareas repetitivas', stat1desc: 'al día para el dueño promedio de un negocio de 5–10 personas',
+    stat2title: 'de los leads nunca reciben seguimiento', stat2desc: 'porque no hay sistema — simplemente se pierden',
+    stat3title: 'perdidos por mes', stat3desc: 'en llamadas perdidas, leads sin agendar y trabajo manual que podría automatizarse',
+    leakTitle: 'Fugas de tiempo semanales', leakSub: 'antes de IA',
+    leakTotal: 'Horas perdidas/semana', leakTotalVal: '15–20 hrs',
+    withAiLabel: 'Después de configurar IA',
+    servicesLabel: 'Lo que hago', servicesTitle: 'Cinco cosas por las que los negocios me pagan.',
+    servicesSub: 'Cada una te ahorra tiempo, te hace ganar dinero, o ambas. La mayoría se activa en menos de una semana.',
+    services: [
+      {
+        icon: '🤖',
+        name: 'Bot de atención al cliente con IA',
+        price: '$1,500–$3,000',
+        desc: 'Un chatbot en tu sitio web entrenado con tus servicios, precios y preguntas frecuentes — atiende clientes 24/7 para que dejes de responder las mismas preguntas todo el día.',
+        result: 'Ahorra 2–3 hrs/día en preguntas repetitivas'
+      },
+      {
+        icon: '📞',
+        name: 'Agente de llamadas con IA',
+        price: '$2,000–$4,000',
+        desc: 'Un número telefónico que contesta llamadas automáticamente, agenda citas y captura leads fuera de horario. Nunca pierdas otra llamada.',
+        result: 'Recupera 10–15 trabajos/mes de llamadas perdidas'
+      },
+      {
+        icon: '💬',
+        name: 'Automatización de seguimiento de leads',
+        price: '$1,000–$2,500',
+        desc: 'Cuando alguien te contacta y no agenda, recibe automáticamente una secuencia de textos/correos con seguimiento por 14 días. Se configura una vez.',
+        result: 'El 67% de leads responde texto vs. buzón de voz'
+      },
+      {
+        icon: '🧠',
+        name: 'Asistente interno con IA',
+        price: '$1,500–$3,000',
+        desc: 'Tu equipo hace preguntas y recibe respuestas instantáneas — entrenado con tus procedimientos, precios y guiones. Deja de ser la respuesta a cada pregunta.',
+        result: 'Libera 1–2 hrs/día del tiempo del dueño'
+      },
+      {
+        icon: '🗺️',
+        name: 'Auditoría y hoja de ruta de IA',
+        price: '$500 fijo',
+        desc: 'Una llamada de 1 hora + un documento personalizado que muestra exactamente dónde la IA puede ahorrarte tiempo y dinero, ordenado por impacto. Solo el plan, sin implementación.',
+        result: 'Conoce tu primer movimiento de mayor retorno'
+      }
     ],
-    novaResultBold: '12+ trabajos recuperados', novaResultRest: 'por mes solo de llamadas fuera de horario.',
-    leoRole: 'Agente de seguimiento de leads con IA',
-    leoTagline: 'Manda texto a cada lead en 60 segundos. Sigue por 14 días.',
-    leoFeatures: [
-      'Manda texto a cada llamada perdida en 60 segundos',
-      'Da seguimiento el día 1, 3, 7 y 14',
-      'Califica el trabajo y agenda la cita',
-      'Reactiva leads fríos con promociones de temporada',
-      'Funciona por WhatsApp o SMS'
+    howLabel: 'Cómo funciona', howTitle: 'De llamada a en vivo en 5 días.',
+    step1when: 'Día 0', step1title: 'Llamada gratis de 20 min', step1desc: 'Me cuentas dónde están tus mayores pérdidas de tiempo y dinero. Te digo cuál puede resolver la IA primero. Sin venta.',
+    step2when: 'Días 1–4', step2title: 'Lo construyo', step2desc: 'Configuro, entreno y pruebo la IA en tu negocio específico — tus servicios, voz y reglas. Tú revisas antes de salir en vivo.',
+    step3when: 'Día 5', step3title: 'Salir en vivo', step3desc: 'Tu IA empieza a trabajar. Me quedo 30 días para solucionar cualquier problema.',
+    industriesLabel: 'Industrias con las que trabajo',
+    industries: [
+      { icon: '🔧', name: 'HVAC y plomería', hint: 'Llamadas fuera de horario, seguimiento de leads' },
+      { icon: '🍽️', name: 'Restaurantes', hint: 'Reservaciones, preguntas, catering' },
+      { icon: '💆', name: 'Med spas y salones', hint: 'Citas, promociones, seguimiento' },
+      { icon: '🏠', name: 'Bienes raíces', hint: 'Calificación de leads, seguimiento' },
+      { icon: '⚖️', name: 'Despachos legales', hint: 'Intake, citas, preguntas frecuentes' },
+      { icon: '💪', name: 'Fitness y bienestar', hint: 'Membresías, reserva de clases' },
+      { icon: '🏗️', name: 'Contratistas', hint: 'Solicitudes de cotización, llamadas perdidas' },
+      { icon: '🛒', name: 'E-commerce', hint: 'Atención al cliente, estado de pedidos' }
     ],
-    leoResultBold: '67% de los leads', leoResultRest: 'que no contestan llamadas sí responden texto.',
-    howLabel: 'Cómo funciona', howTitle: 'En vivo en 5 días.',
-    step1when: 'Hoy', step1title: 'Agenda una auditoría gratis de 15 min', step1desc: 'Te mostramos exactamente cuántas llamadas estás perdiendo y cuánto te está costando.',
-    step2when: 'Días 1–5', step2title: 'Construimos a Nova y Marco', step2desc: 'Entrenados con tus servicios, precios y horario. Tú apruebas antes de salir en vivo.',
-    step3when: 'Día 5', step3title: 'Salir en vivo', step3desc: 'Cada llamada contestada, cada lead con seguimiento y un resumen matutino por texto cada día.',
-    dashMeta: 'Resumen matutino · Mar 7:00 AM',
-    dashCalls: 'Llamadas contestadas', dashJobs: 'Trabajos agendados', dashLeads: 'Leads contactados',
-    pricingLabel: 'Precios', pricingTitle: 'Un precio fijo. Sin sorpresas.',
-    setupLabel: 'configuración única', afterLabel: 'después de 30 días',
-    pricingCta: 'Empieza con una Auditoría Gratis', cancelNote: 'Cancela cuando quieras. Sin contrato.',
-    statJob: 'por trabajo', statNova: 'Nova/mes', statRoi: 'retorno típico',
-    guarantee: 'Garantía de devolución de 30 días',
+    pricingLabel: 'Precios', pricingTitle: 'Empieza pequeño. Escala cuando lo veas funcionar.',
+    pricingSub: 'Elige el punto de entrada que tenga sentido para tu negocio.',
+    plans: [
+      {
+        tier: 'Inicial',
+        price: '$500',
+        cadence: 'pago único',
+        badge: '',
+        border: '1px solid var(--border)',
+        desc: 'Auditoría y hoja de ruta de IA. Encuentro exactamente dónde estás perdiendo tiempo y dinero y te muestro qué arreglar primero.',
+        includes: ['Llamada de descubrimiento de 1 hora', 'Informe personalizado de oportunidades IA', 'Plan de acción por prioridad de impacto', 'Recomendaciones de herramientas'],
+        cta: 'Agenda la Auditoría',
+        ctaBg: 'var(--surface-2)', ctaFg: 'var(--ink)', ctaBorder: '1px solid var(--border)'
+      },
+      {
+        tier: 'Construcción',
+        price: '$1,500–$4,000',
+        cadence: 'proyecto único',
+        badge: 'Más popular',
+        border: '2px solid var(--accent)',
+        desc: 'Construyo una solución de IA para tu negocio — chatbot, agente telefónico, seguimiento de leads o asistente interno.',
+        includes: ['Construcción y configuración completa', 'Entrenado con tu negocio', 'Inglés y español', 'En vivo en 3–5 días', '30 días de soporte incluido'],
+        cta: 'Iniciar Proyecto',
+        ctaBg: 'var(--accent)', ctaFg: 'var(--accent-ink)', ctaBorder: '2px solid var(--accent)'
+      },
+      {
+        tier: 'Retainer',
+        price: '$500/mes',
+        cadence: 'mensual',
+        badge: '',
+        border: '1px solid var(--border)',
+        desc: 'Monitoreo, mejoro y expando tu IA cada mes. Agrego nuevas automatizaciones conforme crece tu negocio.',
+        includes: ['Llamadas mensuales de optimización', 'Nuevas automatizaciones cada mes', 'Soporte prioritario', 'Cancela cuando quieras'],
+        cta: 'Hablemos del Retainer',
+        ctaBg: 'var(--surface-2)', ctaFg: 'var(--ink)', ctaBorder: '1px solid var(--border)'
+      }
+    ],
+    cancelNote: 'Sin contratos. Garantía de devolución de 30 días en todos los proyectos.',
     faqLabel: 'Preguntas', faqTitle: 'Respuestas',
-    ctaTitle: 'Agenda tu auditoría gratis de 15 min.',
-    ctaSub: 'Te mostramos exactamente cuántas llamadas estás perdiendo y cuánto te está costando. Sin venta. Sin compromiso. Solo los números.',
-    ctaBtn: 'Agenda una Auditoría Gratis de 15 Min', ctaPhone: 'o llama al (214) 810-0799',
-    footerTagline: '2 compañeros de IA que se encargan del trabajo repetitivo. Tu equipo, multiplicado.',
-    footerProduct: 'Producto', footerCompany: 'Empresa', footerGetStarted: 'Empieza',
-    footerBook: 'Auditoría gratis', footerLang: 'English',
+    ctaTitle: '¿No sabes por dónde empezar?',
+    ctaSub: 'Agenda una llamada gratis de 20 minutos. Te muestro exactamente dónde tu negocio está perdiendo tiempo y dinero — y qué puede arreglar la IA primero. Sin venta.',
+    ctaBtn: 'Agenda una Llamada Gratis de 20 Min', ctaPhone: 'o llama al (214) 810-0799',
+    footerTagline: 'Implementación de IA para pequeñas y medianas empresas. Inglés y español. Dallas, TX.',
+    footerContact: 'Contacto', footerGetStarted: 'Empieza',
+    footerBook: 'Llamada gratis', footerLang: 'English',
     customer: 'Cliente', replay: '↻ repetir'
   }
 };
+
 const DEMOS = {
-  call: {
-    label: { en: 'Call', es: 'Llamada' }, agent: 'Nova', initial: 'B',
-    meta: { en: 'Inbound call · (214) 555-0142', es: 'Llamada entrante · (214) 555-0142' },
-    status: { en: 'Live call', es: 'Llamada en vivo' }, clock: '9:47 PM',
-    footer: { en: 'Answered in 2 rings', es: 'Contestada en 2 timbres' },
+  chat: {
+    label: { en: 'Chat Bot', es: 'Chat Bot' }, agent: 'AI Assistant',
+    meta: { en: 'Website chat · Sunrise Dental Dallas', es: 'Chat del sitio · Sunrise Dental Dallas' },
+    status: { en: 'Online 24/7', es: 'En línea 24/7' }, clock: '8:34 PM',
+    footer: { en: 'Answers while you sleep', es: 'Responde mientras duermes' },
     msgs: [
-      ['a', "Thanks for calling Rivera Heating & Air, this is Nova. How can I help tonight?"],
-      ['u', "My AC stopped cooling and it's 88 degrees inside."],
-      ['a', "I'm sorry, let's get a tech out to you. What's the service address?"],
-      ['u', '4120 Ross Ave, Dallas.'],
-      ['a', 'I have tomorrow 8–10 AM open. Want me to book it?'],
-      ['u', 'Yes, please.'],
-      ['e', 'Job booked · Wed 8–10 AM · confirmation texted']
-    ]},
-  text: {
-    label: { en: 'Text', es: 'Texto' }, agent: 'Marco', initial: 'L',
-    meta: { en: 'SMS · missed call follow-up', es: 'SMS · seguimiento de llamada perdida' },
-    status: { en: 'Texting', es: 'Enviando texto' }, clock: '6:12 PM',
-    footer: { en: 'Sent 60 seconds after a missed call', es: 'Enviado 60 segundos después de una llamada perdida' },
+      ['u', "Do you have same-day appointments?"],
+      ['a', "Yes! We usually have same-day slots. What's the reason for your visit?"],
+      ['u', "Toothache on the lower left."],
+      ['a', "Got it. I have today at 4:30 PM or tomorrow at 9 AM. Which works for you?"],
+      ['u', "Today at 4:30."],
+      ['a', "Perfect. Can I get your name and phone number to confirm?"],
+      ['e', 'Appointment booked · Today 4:30 PM · confirmation sent']
+    ]
+  },
+  sms: {
+    label: { en: 'Lead SMS', es: 'SMS Lead' }, agent: 'AI Follow-Up',
+    meta: { en: 'SMS · missed lead · 3 hrs ago', es: 'SMS · lead perdido · hace 3 hrs' },
+    status: { en: 'Sending', es: 'Enviando' }, clock: '2:15 PM',
+    footer: { en: 'Sent 60 seconds after missed contact', es: 'Enviado 60 segundos después del contacto perdido' },
     msgs: [
-      ['a', 'Hi, this is Marco with Rivera Heating & Air. Sorry we missed your call. What can we help with?'],
-      ['u', 'Water heater is leaking in the garage.'],
-      ['a', 'Got it. Is it a tank or tankless unit, and is the water shut off?'],
-      ['u', "Tank. Yes it's off."],
-      ['a', 'We can be there tomorrow 1–3 PM. Should I book it?'],
-      ['u', 'Book it.'],
-      ['e', 'Job booked · Thu 1–3 PM · added to calendar']
-    ]},
-  whatsapp: {
-    label: { en: 'WhatsApp', es: 'WhatsApp' }, agent: 'Nova', initial: 'B',
-    meta: { en: 'WhatsApp · Español', es: 'WhatsApp · Español' },
-    status: { en: 'Online', es: 'En línea' }, clock: '10:31 PM',
-    footer: { en: 'English or Spanish, automatically', es: 'Inglés o español, automáticamente' },
+      ['a', "Hi! This is Maria with Glow Med Spa. I saw you reached out earlier — still interested in our free consultation?"],
+      ['u', "Yes, I forgot to call back."],
+      ['a', "No worries! We have Tuesday at 11 AM or Thursday at 2 PM. Which works?"],
+      ['u', "Thursday 2pm works."],
+      ['a', "Done! I'll send a reminder the day before. See you Thursday!"],
+      ['e', 'Appointment booked · Thu 2:00 PM · added to calendar']
+    ]
+  },
+  internal: {
+    label: { en: 'Team AI', es: 'IA Interna' }, agent: 'Team Assistant',
+    meta: { en: 'Internal tool · Flores Roofing Co.', es: 'Herramienta interna · Flores Roofing Co.' },
+    status: { en: 'Always on', es: 'Siempre activo' }, clock: '10:22 AM',
+    footer: { en: 'Trained on your SOPs and pricing', es: 'Entrenado con tus procedimientos y precios' },
     msgs: [
-      ['u', 'Hola, mi calefacción no prende.'],
-      ['a', 'Hola, soy Nova de Rivera Heating & Air. Lo siento. ¿Me da la dirección del servicio?'],
-      ['u', '2210 Jefferson Blvd, Dallas.'],
-      ['a', 'Tengo mañana de 9 a 11 AM. ¿Se lo agendo?'],
-      ['u', 'Sí, por favor.'],
-      ['a', 'Listo. Le envié la confirmación por mensaje.'],
-      ['e', 'Trabajo agendado · Jue 9–11 AM']
-    ]}
+      ['u', "What do we charge for a full roof replacement on a 2,000 sqft house?"],
+      ['a', "For a 2,000 sqft single-story, standard shingles: $12,000–$16,000. Premium shingles: $18,000–$24,000. Metal roof: $28,000–$36,000. These include tear-off and disposal."],
+      ['u', "What's our warranty on labor?"],
+      ['a', "5 years on labor, 25–50 years on materials depending on manufacturer. All warranties are transferable if the homeowner sells."],
+      ['e', 'Answer from your company SOPs — no calls to the owner needed']
+    ]
+  }
 };
-const LEDGER = [
-  { time: '6:48 PM', job: { en: 'AC not cooling', es: 'AC no enfría' }, amount: '$400' },
-  { time: '8:15 PM', job: { en: 'Water heater leak', es: 'Fuga de calentador' }, amount: '$350' },
-  { time: '9:52 PM', job: { en: 'Furnace won’t start', es: 'Calefacción no enciende' }, amount: '$450' },
-  { time: '11:20 PM', job: { en: 'Clogged main line', es: 'Drenaje principal tapado' }, amount: '$350' }
+
+const LEAKS = [
+  { task: { en: 'Answering same customer questions', es: 'Responder las mismas preguntas de clientes' }, cost: '8 hrs/wk' },
+  { task: { en: 'Manual lead follow-up', es: 'Seguimiento manual de leads' }, cost: '4 hrs/wk' },
+  { task: { en: 'Scheduling and rescheduling', es: 'Agendar y reagendar citas' }, cost: '3 hrs/wk' },
+  { task: { en: 'Training new employees', es: 'Capacitar nuevos empleados' }, cost: '5 hrs/wk' }
 ];
-const BOOKINGS = [
-  { time: '8:00', job: { en: 'AC repair · 4120 Ross Ave', es: 'Reparación AC · 4120 Ross Ave' }, by: 'Nova' },
-  { time: '10:30', job: { en: 'Tune-up · Lakewood', es: 'Mantenimiento · Lakewood' }, by: 'Marco' },
-  { time: '1:00', job: { en: 'Water heater · Oak Cliff', es: 'Calentador · Oak Cliff' }, by: 'Marco' },
-  { time: '3:30', job: { en: 'No heat · Bishop Arts', es: 'Sin calefacción · Bishop Arts' }, by: 'Nova' }
-];
-const INCLUDED = {
-  en: ['Nova & Marco fully built', 'Trained on your services, prices & schedule', 'English & Spanish, 24/7', 'WhatsApp, SMS, and phone call', 'Live in 3–5 business days', 'Morning summary text every day', 'You approve before anything goes live'],
-  es: ['Nova y Marco completamente construidos', 'Entrenados con tus servicios, precios y horario', 'Inglés y español, 24/7', 'WhatsApp, SMS y llamada telefónica', 'En vivo en 3–5 días hábiles', 'Resumen por texto cada mañana', 'Tú apruebas antes de salir en vivo']
-};
+
 const FAQS = {
   en: [
-    ['Will my customers know it’s AI?', 'Nova speaks with a natural voice in English or Spanish, so most callers simply get their job booked. If a customer asks, Nova tells them she’s your AI assistant, and she transfers to you for real emergencies.'],
-    ['Does it work with WhatsApp?', 'Yes. Nova and Marco work over WhatsApp, SMS, and phone call, so customers reach you however they prefer.'],
-    ['What if I already have a receptionist?', 'We don’t replace employees, we multiply them. Nova covers nights, weekends, holidays, and overflow when your receptionist is already on a call.'],
-    ['What if the AI makes a mistake?', 'You approve everything before it goes live, and you get a morning summary text every day showing each call and booking. Real emergencies are transferred straight to you.'],
-    ['Does it work with my scheduling software?', 'Nova books directly into Google Calendar or your scheduling app. We set up the connection during your 3–5 day build.'],
-    ['How fast can I cancel?', 'Anytime. There’s no contract, and you’re covered by our 30-Day Money-Back Guarantee.']
+    ['Do I need to know anything about AI or tech?', 'No. That\'s my job. You tell me what\'s wasting your time and I figure out what to build. You just approve it before it goes live.'],
+    ['How fast can you actually build something?', 'Most projects are live in 3–5 business days. A simple chatbot can be live the same day. A full phone agent with calendar integration takes the full 5 days.'],
+    ['What if it doesn\'t work for my business?', 'Everything comes with a 30-day money-back guarantee. If it\'s not saving you time or making you money within 30 days, you get a full refund.'],
+    ['Do you work with businesses outside Dallas?', 'Yes — most of my work is remote. Dallas clients can also meet in person.'],
+    ['Can it work in Spanish?', 'Yes. Everything I build works in English and Spanish by default. This is one of my biggest differentiators — most AI consultants don\'t handle Spanish well.'],
+    ['What do I need to get started?', 'Just 20 minutes on a call. I do the rest. You don\'t need to have your systems organized or know what you need.']
   ],
   es: [
-    ['¿Mis clientes van a saber que es IA?', 'Nova habla con voz natural en inglés o español, así que la mayoría solo agenda su trabajo. Si un cliente pregunta, Nova le dice que es tu asistente de IA y te transfiere en emergencias reales.'],
-    ['¿Funciona con WhatsApp?', 'Sí. Nova y Marco funcionan por WhatsApp, SMS y llamada telefónica, para que tus clientes te contacten como prefieran.'],
-    ['¿Qué pasa si ya tengo una recepcionista?', 'No reemplazamos empleados, los multiplicamos. Nova cubre noches, fines de semana, festivos y desbordamiento cuando tu recepcionista ya está en una llamada.'],
-    ['¿Qué pasa si la IA comete un error?', 'Tú apruebas todo antes de salir en vivo, y recibes un resumen por texto cada mañana con cada llamada y reserva. Las emergencias reales se transfieren directamente a ti.'],
-    ['¿Funciona con mi software de citas?', 'Nova agenda directamente en Google Calendar o tu app de citas. Configuramos la conexión durante tu construcción de 3–5 días.'],
-    ['¿Qué tan rápido puedo cancelar?', 'Cuando quieras. No hay contrato y estás cubierto por nuestra Garantía de devolución de 30 días.']
+    ['¿Necesito saber algo de IA o tecnología?', 'No. Ese es mi trabajo. Tú me dices qué te está quitando tiempo y yo determino qué construir. Solo tienes que aprobar antes de que salga en vivo.'],
+    ['¿Qué tan rápido puedes construir algo?', 'La mayoría de los proyectos están en vivo en 3–5 días hábiles. Un chatbot simple puede estar listo el mismo día. Un agente telefónico completo con integración de calendario toma los 5 días completos.'],
+    ['¿Qué pasa si no funciona para mi negocio?', 'Todo viene con garantía de devolución de 30 días. Si no te está ahorrando tiempo o generando dinero en 30 días, recibes un reembolso completo.'],
+    ['¿Trabajas con negocios fuera de Dallas?', 'Sí — la mayoría de mi trabajo es remoto. Los clientes de Dallas también pueden reunirse en persona.'],
+    ['¿Puede funcionar en español?', 'Sí. Todo lo que construyo funciona en inglés y español por defecto. Esta es una de mis mayores ventajas — la mayoría de los consultores de IA no manejan bien el español.'],
+    ['¿Qué necesito para empezar?', 'Solo 20 minutos en una llamada. Yo hago el resto. No necesitas tener tus sistemas organizados ni saber qué necesitas.']
   ]
-};
-const ACCENTS = {
-  'Deep sky': ['#1E5A86', '#8CC4EE'],
-  'Moss': ['#2F5A3A', '#9FCB9A'],
-  'Clay': ['#9A4E2C', '#EDB993']
 };
 
 class Component extends DCLogic {
-  state = { lang: 'en', theme: 'light', tab: 'call', step: 0, w: 1200, openFaq: 0 };
+  state = { lang: 'en', theme: 'light', tab: 'chat', step: 0, w: 1200, openFaq: 0 };
 
   componentDidMount() {
     const fromHash = () => this.setState({ lang: location.hash.startsWith('#/es') ? 'es' : 'en' });
@@ -585,8 +666,6 @@ class Component extends DCLogic {
   applyVars() {
     const r = document.documentElement, t = this.state.theme;
     r.dataset.theme = t; r.lang = this.state.lang;
-    const a = ACCENTS[this.props.accent] || ACCENTS['Deep sky'];
-    r.style.setProperty('--accent', t === 'dark' ? a[1] : a[0]);
   }
   play() {
     clearInterval(this.timer);
@@ -626,9 +705,7 @@ class Component extends DCLogic {
       msgs: d.msgs.slice(0, step).map(([s, text]) => ({ agent: s === 'a', user: s === 'u', event: s === 'e', text, who: s === 'a' ? d.agent : COPY[lang].customer })),
       typing: step < d.msgs.length,
       replay: () => this.play(),
-      ledger: LEDGER.map(r => ({ ...r, job: r.job[lang] || r.job.en })),
-      bookings: BOOKINGS.map(b => ({ ...b, job: b.job[lang] || b.job.en })),
-      included: INCLUDED[lang] || INCLUDED.en,
+      leaks: LEAKS.map(r => ({ ...r, task: r.task[lang] || r.task.en })),
       faqs: (FAQS[lang] || FAQS.en).map(([q, a], i) => ({ q, a, id: 'faq-' + i, open: openFaq === i, icon: openFaq === i ? '−' : '+',
         toggle: () => this.setState({ openFaq: openFaq === i ? -1 : i }) }))
     };
